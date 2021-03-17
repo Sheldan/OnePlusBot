@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  bot:
+    build: oneplusbot
+    image: ${REGISTRY_PREFIX}oneplus_bot:${VERSION:-latest}
+  database:
+    build: database
+    image: ${REGISTRY_PREFIX}oneplus_bot_database:${VERSION:-latest}
+  pg_admin:
+    build: pgAdmin
+    image: ${REGISTRY_PREFIX}oneplus_bot_pg_admin:${VERSION:-latest}
+  deployment_container:
+    build: deployment
+    image: ${REGISTRY_PREFIX}oneplus_bot_deployment:${VERSION:-latest}
+  prometheus:
+    build: prometheus
+    image: ${REGISTRY_PREFIX}oneplus_bot_prometheus:${VERSION:-latest}
+  grafana:
+    build: grafana
+    image: ${REGISTRY_PREFIX}oneplus_bot_grafana:${VERSION:-latest}

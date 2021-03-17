@@ -1,0 +1,1 @@
+The channel where the notifications about starboard posts should be posted to. Currently: ${currentTarget}

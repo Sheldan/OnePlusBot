@@ -1,0 +1,15 @@
+{
+  "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "starboard-custom"],
+  "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "starboard-custom"],
+  "liquibase_artifacts": [
+    { "zip": "scheduling", "file": "scheduling-changeLog.xml" },
+    { "zip": "core", "file": "core-changeLog.xml" },
+    { "zip": "utility", "file": "utility-changeLog.xml"},
+    { "zip": "entertainment", "file": "entertainment-changeLog.xml"},
+    { "zip": "link-embed", "file": "link-embed-changeLog.xml"},
+    { "zip": "starboard", "file": "starboard-changeLog.xml"},
+    { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"}
+  ]
+}
+
+

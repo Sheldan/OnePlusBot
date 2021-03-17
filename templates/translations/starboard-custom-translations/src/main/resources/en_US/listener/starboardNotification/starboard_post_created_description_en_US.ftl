@@ -1,0 +1,1 @@
+Starboard post ${post.id?c} was created, because it reached the threshold.

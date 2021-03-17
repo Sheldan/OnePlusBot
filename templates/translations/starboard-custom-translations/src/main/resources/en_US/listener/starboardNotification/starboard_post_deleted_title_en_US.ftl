@@ -1,0 +1,1 @@
+Starboard post has been deleted
