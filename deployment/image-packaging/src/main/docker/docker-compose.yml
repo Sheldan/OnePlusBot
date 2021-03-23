@@ -11,7 +11,11 @@ services:
     build: pgAdmin
     image: ${REGISTRY_PREFIX}oneplus_bot_pg_admin:${VERSION:-latest}
   deployment_container:
-    build: deployment
+    build:
+      context: deployment
+      args:
+        ABSTRACTO_REGISTRY_PREFIX: ${ABSTRACTO_REGISTRY_PREFIX}
+        ABSTRACTO_VERSION: ${ABSTRACTO_VERSION}
     image: ${REGISTRY_PREFIX}oneplus_bot_deployment:${VERSION:-latest}
   prometheus:
     build: prometheus

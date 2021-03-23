@@ -16,6 +16,9 @@ jobs:
       - name: Load current version
         id: version
         run: echo "version=$(mvn --file pom.xml -q -Dexec.executable="echo" -Dexec.args='${project.version}' --non-recursive exec:exec)" >> $GITHUB_ENV
+      - name: Load abstracto version
+        id: abstracto_version
+        run: echo "abstracto_version=${mvn help:evaluate --file pom.xml -Dexpression=abstracto.version -q -DforceStdout}" >> $GITHUB_ENV
       - name: Publish to GitHub Packages
         run: mvn -s settings.xml --file pom.xml -B deploy -Dmaven.wagon.http.pool=false -DskipTests=true
         env:
@@ -34,3 +37,5 @@ jobs:
         env:
           REGISTRY_PREFIX: docker.pkg.github.com/sheldan/oneplusbot/
           VERSION: ${{ env.version }}
+          ABSTRACTO_VERSION: ${{ env.abstracto_version }}
+          ABSTRACTO_REGISTRY_PREFIX: docker.pkg.github.com/sheldan/abstracto/
