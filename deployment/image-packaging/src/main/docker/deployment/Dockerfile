@@ -1,4 +1,4 @@
-FROM abstracto_deployment:latest
+FROM docker.pkg.github.com/sheldan/abstracto/abstracto_deployment:latest
 MAINTAINER Sheldan
 ADD template-artifacts /templates
 ADD translation-artifacts /translations
