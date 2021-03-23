@@ -45,4 +45,18 @@
 
     </repositories>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/Sheldan/OnePlusBot</url>
+        </repository>
+    </distributionManagement>
+
+    <scm>
+        <url>https://maven.pkg.github.com/Sheldan/OnePlusBot</url>
+        <developerConnection>scm:git:git@github.com:Sheldan/OnePlusBot.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
 </project>
