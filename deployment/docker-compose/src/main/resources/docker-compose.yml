@@ -56,6 +56,9 @@ services:
       - "${TOMCAT_PORT}:8080"
     networks:
       - oneplusbot
+    volumes:
+      - bot-logs:/logs
+      - ./config:/config
   pgadmin:
     container_name: pgadmin
     image: ${REGISTRY_PREFIX}oneplus_bot_pg_admin
@@ -81,6 +84,7 @@ services:
       - oneplusbot
     volumes:
       - ./res/prometheus-scrapper-password-filled:/etc/prometheus/micrometer_password
+      - prometheus-data:/prometheus
   grafana:
     container_name: grafana
     image: ${REGISTRY_PREFIX}oneplus_bot_grafana
@@ -103,3 +107,5 @@ networks:
 volumes:
   db-data:
   grafana-user-data:
+  prometheus-data:
+  bot-logs:
