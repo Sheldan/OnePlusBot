@@ -89,6 +89,16 @@
                             <destFileName>utility.zip</destFileName>
                         </artifactItem>
 
+ f                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.templates</groupId>
+                            <artifactId>webservices</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>webservices.zip</destFileName>
+                        </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.oneplus.bot.templates.modules</groupId>
                             <artifactId>starboard-custom-templates</artifactId>
@@ -145,6 +155,7 @@
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>starboard.zip</destFileName>
                         </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.translations</groupId>
                             <artifactId>utility</artifactId>
@@ -153,6 +164,16 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>utility.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.translations</groupId>
+                            <artifactId>webservices</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>webservices.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
@@ -242,6 +263,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
                             <destFileName>utility.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto.modules</groupId>
+                            <artifactId>webservices-impl</artifactId>
+                            <version>${abstracto.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>webservices.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
