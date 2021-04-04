@@ -10,6 +10,7 @@
     <modules>
         <module>oneplus-bot-modules</module>
         <module>translations</module>
+        <module>overrides</module>
     </modules>
 
     <groupId>dev.sheldan.oneplus.bot.templates</groupId>

@@ -287,6 +287,17 @@
                             <destFileName>starboard-custom.zip</destFileName>
                         </artifactItem>
 
+                        <!-- overrides -->
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
+                            <artifactId>webservices</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>overrides-templates-webservices.zip</destFileName>
+                        </artifactItem>
+
                     </artifactItems>
                 </configuration>
             </plugin>
