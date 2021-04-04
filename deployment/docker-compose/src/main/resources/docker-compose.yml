@@ -2,21 +2,21 @@ version: '3.7'
 
 services:
   db:
-    image: ${REGISTRY_PREFIX}oneplus_bot_database
+    image: ${REGISTRY_PREFIX}oneplus_bot_database:${ONEPLUS_BOT_VERSION}
     container_name: database
     restart: always
     environment:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_USER: ${DATABASE_USER}
     ports:
-      - "${DATABASE_PORT}:5432"
+      - "127.0.0.1:${DATABASE_PORT}:5432"
     networks:
       - oneplusbot
     volumes:
       - db-data:/var/lib/postgresql/data
   deployment_container:
     container_name: deployment
-    image: ${REGISTRY_PREFIX}oneplus_bot_deployment
+    image: ${REGISTRY_PREFIX}oneplus_bot_deployment:${ONEPLUS_BOT_VERSION}
     depends_on:
       - db
     environment:
@@ -34,7 +34,7 @@ services:
     networks:
       - oneplusbot
   bot:
-    image: ${REGISTRY_PREFIX}oneplus_bot
+    image: ${REGISTRY_PREFIX}oneplus_bot:${ONEPLUS_BOT_VERSION}
     depends_on:
       - db
       - deployment_container
@@ -53,8 +53,8 @@ services:
       YOUTUBE_API_KEY: ${YOUTUBE_API_KEY}
     command: sh -c "while ping -c1 deployment_container &>/dev/null; do sleep 1; done; echo 'Liquibase finished!' && ./start.sh"
     ports:
-      - "${DEBUG_PORT}:5005"
-      - "${TOMCAT_PORT}:8080"
+      - "127.0.0.1:${DEBUG_PORT}:5005"
+      - "127.0.0.1:${TOMCAT_PORT}:8080"
     networks:
       - oneplusbot
     volumes:
@@ -62,24 +62,24 @@ services:
       - ./config:/config
   pgadmin:
     container_name: pgadmin
-    image: ${REGISTRY_PREFIX}oneplus_bot_pg_admin
+    image: ${REGISTRY_PREFIX}oneplus_bot_pg_admin:${ONEPLUS_BOT_VERSION}
     depends_on:
       - db
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
-      - "${PGADMIN_PORT}:80"
+      - "127.0.0.1:${PGADMIN_PORT}:80"
     restart: unless-stopped
     networks:
       - oneplusbot
   prometheus:
     container_name: prometheus
-    image: ${REGISTRY_PREFIX}oneplus_bot_prometheus
+    image: ${REGISTRY_PREFIX}oneplus_bot_prometheus:${ONEPLUS_BOT_VERSION}
     depends_on:
       - bot
     ports:
-      - "${PROMETHEUS_PORT}:9090"
+      - "127.0.0.1:${PROMETHEUS_PORT}:9090"
     restart: unless-stopped
     networks:
       - oneplusbot
@@ -88,12 +88,12 @@ services:
       - prometheus-data:/prometheus
   grafana:
     container_name: grafana
-    image: ${REGISTRY_PREFIX}oneplus_bot_grafana
+    image: ${REGISTRY_PREFIX}oneplus_bot_grafana:${ONEPLUS_BOT_VERSION}
     depends_on:
       - prometheus
       - bot
     ports:
-      - "${GRAFANA_PORT}:3000"
+      - "127.0.0.1:${GRAFANA_PORT}:3000"
     restart: unless-stopped
     volumes:
       - grafana-user-data:/var/lib/grafana
