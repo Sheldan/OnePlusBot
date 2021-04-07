@@ -15,6 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
+  "iteration": 1617834467529,
   "links": [],
   "panels": [
     {
@@ -521,12 +522,12 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 7,
-        "w": 6,
+        "w": 12,
         "x": 12,
         "y": 16
       },
       "hiddenSeries": false,
-      "id": 10,
+      "id": 32,
       "legend": {
         "avg": false,
         "current": false,
@@ -553,110 +554,16 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(help_executions_total[1m])",
+          "exemplar": true,
+          "expr": "increase(discord_gateway_ping[1m])",
           "interval": "",
-          "legendFormat": "{{ category }}",
+          "legendFormat": "Gateway ping",
           "refId": "A"
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
-      "title": "Help command",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 6,
-        "x": 18,
-        "y": 16
-      },
-      "hiddenSeries": false,
-      "id": 22,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.2",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "increase(modmail_threads_total[1m])",
-          "interval": "",
-          "legendFormat": "{{ action }}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Modmail threads",
+      "title": "Gateway ping",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -898,7 +805,7 @@
         "y": 23
       },
       "hiddenSeries": false,
-      "id": 6,
+      "id": 10,
       "legend": {
         "avg": false,
         "current": false,
@@ -925,9 +832,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(message_embedded_total[1m])",
+          "expr": "increase(help_executions_total[1m])",
           "interval": "",
-          "legendFormat": "{{action}}",
+          "legendFormat": "{{ category }}",
           "refId": "A"
         }
       ],
@@ -935,7 +842,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Embedded messages",
+      "title": "Help command",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -991,7 +898,7 @@
         "y": 23
       },
       "hiddenSeries": false,
-      "id": 20,
+      "id": 22,
       "legend": {
         "avg": false,
         "current": false,
@@ -1018,9 +925,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(moderation_purge_total[1m])",
+          "expr": "increase(modmail_threads_total[1m])",
           "interval": "",
-          "legendFormat": "Messages",
+          "legendFormat": "{{ action }}",
           "refId": "A"
         }
       ],
@@ -1028,7 +935,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Message purges",
+      "title": "Modmail threads",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1270,6 +1177,192 @@
         "y": 30
       },
       "hiddenSeries": false,
+      "id": 6,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.2",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "increase(message_embedded_total[1m])",
+          "interval": "",
+          "legendFormat": "{{action}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Embedded messages",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 18,
+        "y": 30
+      },
+      "hiddenSeries": false,
+      "id": 20,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.2",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "increase(moderation_purge_total[1m])",
+          "interval": "",
+          "legendFormat": "Messages",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Message purges",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 12,
+        "y": 37
+      },
+      "hiddenSeries": false,
       "id": 18,
       "legend": {
         "avg": false,
@@ -1360,7 +1453,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 30
+        "y": 37
       },
       "hiddenSeries": false,
       "id": 28,
