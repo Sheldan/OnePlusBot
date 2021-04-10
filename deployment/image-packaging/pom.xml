@@ -89,7 +89,7 @@
                             <destFileName>utility.zip</destFileName>
                         </artifactItem>
 
- f                        <artifactItem>
+ f                      <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.templates</groupId>
                             <artifactId>webservices</artifactId>
                             <version>${abstracto.templates.version}</version>
@@ -97,6 +97,16 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
                             <destFileName>webservices.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.templates</groupId>
+                            <artifactId>remind</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>remind.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
@@ -174,6 +184,16 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>webservices.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.translations</groupId>
+                            <artifactId>remind</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>remind.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
@@ -274,6 +294,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
                             <destFileName>webservices.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto.modules</groupId>
+                            <artifactId>remind-impl</artifactId>
+                            <version>${abstracto.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>remind.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
