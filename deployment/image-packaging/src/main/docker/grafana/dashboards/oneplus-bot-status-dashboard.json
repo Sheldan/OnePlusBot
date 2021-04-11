@@ -555,7 +555,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(discord_gateway_ping[1m])",
+          "expr": "discord_gateway_ping",
           "interval": "",
           "legendFormat": "Gateway ping",
           "refId": "A"
