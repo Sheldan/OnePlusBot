@@ -1,5 +1,5 @@
 {
-  "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "starboard-custom", "overrides-templates-webservices"],
+  "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "starboard-custom", "overrides-templates-webservices", "overrides-templates-core"],
   "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "starboard-custom"],
   "liquibase_artifacts": [
     { "zip": "scheduling", "file": "scheduling-changeLog.xml" },

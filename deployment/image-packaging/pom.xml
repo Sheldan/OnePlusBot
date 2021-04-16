@@ -319,6 +319,17 @@
                         </artifactItem>
 
                         <!-- overrides -->
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
+                            <artifactId>core</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>overrides-templates-core.zip</destFileName>
+                        </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
                             <artifactId>webservices</artifactId>

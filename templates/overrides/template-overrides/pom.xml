@@ -14,6 +14,7 @@
 
     <modules>
         <module>webservices</module>
+        <module>core</module>
     </modules>
 
 
