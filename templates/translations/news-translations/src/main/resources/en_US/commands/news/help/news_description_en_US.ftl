@@ -1,0 +1,1 @@
+Posts a news post in the news channel

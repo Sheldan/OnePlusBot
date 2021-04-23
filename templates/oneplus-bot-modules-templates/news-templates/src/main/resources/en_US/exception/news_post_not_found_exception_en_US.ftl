@@ -1,0 +1,1 @@
+<#include "news_post_not_found_exception_text">

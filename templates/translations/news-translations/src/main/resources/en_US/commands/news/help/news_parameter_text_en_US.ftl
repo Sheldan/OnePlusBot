@@ -1,0 +1,1 @@
+The text the news post should contain

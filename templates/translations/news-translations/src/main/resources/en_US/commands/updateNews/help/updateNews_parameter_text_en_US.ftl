@@ -1,0 +1,1 @@
+The new text the news post should receive.

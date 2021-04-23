@@ -1,0 +1,1 @@
+Module used to post & update news in the server

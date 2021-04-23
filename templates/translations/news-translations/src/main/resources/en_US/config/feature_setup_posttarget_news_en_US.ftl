@@ -1,0 +1,1 @@
+The channel in which the news should be posted in. Currently: ${currentTarget}

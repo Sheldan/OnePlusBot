@@ -15,6 +15,7 @@
     <modules>
         <module>executable</module>
         <module>oneplus-bot-customizations</module>
+        <module>oneplus-bot-modules</module>
     </modules>
 
     <dependencyManagement>

@@ -12,5 +12,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>starboard-custom-translations</module>
+        <module>news-translations</module>
     </modules>
 </project>

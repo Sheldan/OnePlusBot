@@ -1,0 +1,1 @@
+<#include "news_post_locked_exception_message">

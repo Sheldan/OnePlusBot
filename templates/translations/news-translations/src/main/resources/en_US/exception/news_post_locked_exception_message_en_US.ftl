@@ -1,0 +1,1 @@
+News post is locked and cannot be edited.

@@ -1,0 +1,1 @@
+Command used to update an existing news post content

@@ -13,5 +13,7 @@
       }
   ],
   "additionalMessage": "${definition.definition?json_string}",
-  "messageLimit": 1
+  "metaConfig": {
+    "messageLimit": 1
+  }
 }

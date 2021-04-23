@@ -1,0 +1,1 @@
+The ID of the news post message which was created.

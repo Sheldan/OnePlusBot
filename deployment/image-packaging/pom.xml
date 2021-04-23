@@ -89,7 +89,7 @@
                             <destFileName>utility.zip</destFileName>
                         </artifactItem>
 
- f                      <artifactItem>
+                        <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.templates</groupId>
                             <artifactId>webservices</artifactId>
                             <version>${abstracto.templates.version}</version>
@@ -117,6 +117,16 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
                             <destFileName>starboard-custom.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.modules</groupId>
+                            <artifactId>news-templates</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>news.zip</destFileName>
                         </artifactItem>
 
                         <!-- translation artefacts -->
@@ -204,6 +214,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>starboard-custom.zip</destFileName>
+                        </artifactItem>
+
+                        <!-- custom -->
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+                            <artifactId>news-translations</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>news.zip</destFileName>
                         </artifactItem>
 
                         <!-- liquibase artifacts -->
@@ -307,6 +328,7 @@
                             <destFileName>remind.zip</destFileName>
                         </artifactItem>
 
+                        <!-- customizations -->
                         <artifactItem>
                             <groupId>dev.sheldan.oneplus.bot.application.custom</groupId>
                             <artifactId>starboard-custom</artifactId>
@@ -316,6 +338,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
                             <destFileName>starboard-custom.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
+                            <artifactId>news</artifactId>
+                            <version>${project.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>news.zip</destFileName>
                         </artifactItem>
 
                         <!-- overrides -->

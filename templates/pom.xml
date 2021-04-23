@@ -8,7 +8,7 @@
     </parent>
 
     <modules>
-        <module>oneplus-bot-modules</module>
+        <module>oneplus-bot-modules-templates</module>
         <module>translations</module>
         <module>overrides</module>
     </modules>
