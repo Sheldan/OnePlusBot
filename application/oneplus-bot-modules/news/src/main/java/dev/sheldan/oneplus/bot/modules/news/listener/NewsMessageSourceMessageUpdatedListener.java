@@ -2,8 +2,8 @@ package dev.sheldan.oneplus.bot.modules.news.listener;
 
 import dev.sheldan.abstracto.core.config.FeatureDefinition;
 import dev.sheldan.abstracto.core.listener.DefaultListenerResult;
-import dev.sheldan.abstracto.core.listener.async.jda.AsyncMessageTextUpdatedListener;
-import dev.sheldan.abstracto.core.models.listener.MessageTextUpdatedModel;
+import dev.sheldan.abstracto.core.listener.async.jda.AsyncMessageUpdatedListener;
+import dev.sheldan.abstracto.core.models.listener.MessageUpdatedModel;
 import dev.sheldan.oneplus.bot.modules.news.config.NewsFeatureDefinition;
 import dev.sheldan.oneplus.bot.modules.news.model.database.NewsPost;
 import dev.sheldan.oneplus.bot.modules.news.service.NewsServiceBean;
@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @Component
 @Slf4j
-public class NewsMessageSourceMessageUpdatedListener implements AsyncMessageTextUpdatedListener {
+public class NewsMessageSourceMessageUpdatedListener implements AsyncMessageUpdatedListener {
 
     @Autowired
     private NewsPostManagementServiceBean newsPostManagementServiceBean;
@@ -25,7 +25,7 @@ public class NewsMessageSourceMessageUpdatedListener implements AsyncMessageText
     private NewsServiceBean newsServiceBean;
 
     @Override
-    public DefaultListenerResult execute(MessageTextUpdatedModel model) {
+    public DefaultListenerResult execute(MessageUpdatedModel model) {
         Optional<NewsPost> existingPostOptional = newsPostManagementServiceBean.getNewsPostForSourceMessage(model.getAfter().getIdLong());
         if(existingPostOptional.isPresent()) {
             NewsPost newsPost = existingPostOptional.get();
