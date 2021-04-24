@@ -52,7 +52,7 @@ public class NewsServiceBean {
 
     @Transactional
     public void lockNewsPosts() {
-        Instant oldestDate = Instant.now().minus(postLockSeconds, ChronoUnit.SECONDS).truncatedTo(ChronoUnit.DAYS);
+        Instant oldestDate = Instant.now().minus(postLockSeconds, ChronoUnit.SECONDS);
         log.info("Locking news posts older than {}.", oldestDate);
         List<NewsPost> oldPosts = newsPostManagementServiceBean.findNewsPostsOlderNotLocked(oldestDate);
         log.info("Locking {} news posts.", oldPosts.size());
