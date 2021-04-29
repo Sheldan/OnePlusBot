@@ -14,6 +14,7 @@
   ],
   "additionalMessage": "${definition.definition?json_string}",
   "metaConfig": {
-    "messageLimit": 1
+    "messageLimit": 1,
+    "additionalMessageLengthLimit": 250
   }
 }
