@@ -1,7 +1,7 @@
 {
   "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "logging",
-    "starboard-custom", "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging", "news"],
-  "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices",
+    "suggestion", "starboard-custom", "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging", "news"],
+  "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "suggestion",
     "remind", "logging", "starboard-custom", "news"],
   "liquibase_artifacts": [
     { "zip": "scheduling", "file": "scheduling-changeLog.xml" },
@@ -13,6 +13,7 @@
     { "zip": "starboard", "file": "starboard-changeLog.xml"},
     { "zip": "remind", "file": "remind-changeLog.xml"},
     { "zip": "logging", "file": "logging-changeLog.xml"},
+    { "zip": "suggestion", "file": "suggestion-changeLog.xml"},
     { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"},
     { "zip": "news", "file": "news-changeLog.xml"}
   ]

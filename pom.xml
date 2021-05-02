@@ -19,8 +19,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <!-- edit in release.yml as well -->
         <!-- when releasing a new opbot version, update the docker-compose as well-->
-        <abstracto.version>1.2.9</abstracto.version>
-        <abstracto.templates.version>1.2.5</abstracto.templates.version>
+        <abstracto.version>1.2.10</abstracto.version>
+        <abstracto.templates.version>1.2.6</abstracto.templates.version>
     </properties>
 
     <modules>
