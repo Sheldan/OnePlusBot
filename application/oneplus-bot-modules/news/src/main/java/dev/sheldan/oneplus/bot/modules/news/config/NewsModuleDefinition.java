@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class NewsModuleDefinition implements ModuleDefinition {
 
-    public static final String NEWS = "news";
+    public static final String NEWS = "newsModule";
 
     @Override
     public ModuleInfo getInfo() {

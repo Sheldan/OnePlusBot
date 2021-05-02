@@ -36,7 +36,7 @@ public class News extends AbstractConditionableCommand {
     public CommandConfiguration getConfiguration() {
         Parameter newsText = Parameter.builder().name("text").type(String.class).remainder(true).templated(true).build();
         List<Parameter> parameters = Arrays.asList(newsText);
-        HelpInfo helpInfo = HelpInfo.builder().templated(true).hasExample(true).build();
+        HelpInfo helpInfo = HelpInfo.builder().templated(true).build();
         return CommandConfiguration.builder()
                 .name("news")
                 .module(NewsModuleDefinition.NEWS)
