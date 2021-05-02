@@ -26,6 +26,8 @@ public class News extends AbstractConditionableCommand {
     @Override
     public CompletableFuture<CommandResult> executeAsync(CommandContext commandContext) {
         String text = (String) commandContext.getParameters().getParameters().get(0);
+        // workaround for Discord formatting issue
+        text = text.replace("\n >", "\n>");
         return newsServiceBean.sendNewsPost(text, commandContext.getMessage())
                 .thenApply(unused -> CommandResult.fromSuccess());
     }

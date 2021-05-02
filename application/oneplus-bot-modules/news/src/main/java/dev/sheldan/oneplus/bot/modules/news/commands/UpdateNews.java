@@ -28,6 +28,8 @@ public class UpdateNews extends AbstractConditionableCommand {
         List<Object> parameters = commandContext.getParameters().getParameters();
         Long messageId = (Long) parameters.get(0);
         String postText = (String) parameters.get(1);
+        // workaround for Discord formatting issue
+        postText = postText.replace("\n >", "\n>");
         return newsServiceBean.updateNewsPostViaId(messageId, postText, commandContext.getMessage())
                 .thenApply(unused -> CommandResult.fromSuccess());
     }
