@@ -121,6 +121,16 @@
 
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.templates</groupId>
+                            <artifactId>invite-filter</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>invite-filter.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.templates</groupId>
                             <artifactId>logging</artifactId>
                             <version>${abstracto.templates.version}</version>
                             <type>zip</type>
@@ -234,6 +244,16 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>suggestion.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.translations</groupId>
+                            <artifactId>invite-filter</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>invite-filter.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
@@ -377,6 +397,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
                             <destFileName>suggestion.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto.modules</groupId>
+                            <artifactId>invite-filter-impl</artifactId>
+                            <version>${abstracto.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>invite-filter.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
