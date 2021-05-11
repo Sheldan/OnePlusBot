@@ -7,5 +7,5 @@ The migration of the existing data from the database is handled via one time mig
 
 Custom features which were ported
  - [ ] FAQ
- - [ ] Setup channel handling
- - [ ] Referral link handling 
+ - [x] Setup channel handling
+ - [x] Referral link handling 
