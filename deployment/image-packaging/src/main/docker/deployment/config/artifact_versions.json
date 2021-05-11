@@ -3,11 +3,11 @@
     "suggestion", "invite-filter",
     "starboard-custom",
     "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging",
-    "news"],
+    "news", "referral"],
   "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "suggestion",
     "remind", "logging", "invite-filter",
     "starboard-custom",
-    "news", "setups"],
+    "news", "setup", "referral"],
   "liquibase_artifacts": [
     { "zip": "scheduling", "file": "scheduling-changeLog.xml" },
     { "zip": "core", "file": "core-changeLog.xml" },
@@ -20,7 +20,8 @@
     { "zip": "logging", "file": "logging-changeLog.xml"},
     { "zip": "suggestion", "file": "suggestion-changeLog.xml"},
     { "zip": "invite-filter", "file": "inviteFilter-changeLog.xml"},
-    { "zip": "setups", "file": "setups-changeLog.xml"},
+    { "zip": "setup", "file": "setup-changeLog.xml"},
+    { "zip": "referral", "file": "referral-changeLog.xml"},
     { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"},
     { "zip": "news", "file": "news-changeLog.xml"}
   ]

@@ -1,0 +1,1 @@
+The channel in which the referral codes should be handled in. Currently: ${currentTarget}

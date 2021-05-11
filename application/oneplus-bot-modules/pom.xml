@@ -12,7 +12,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>news</module>
-        <module>setups</module>
+        <module>setup</module>
+        <module>referral</module>
     </modules>
 
     <properties>

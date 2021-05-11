@@ -124,7 +124,13 @@
 
         <dependency>
             <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
-            <artifactId>setups</artifactId>
+            <artifactId>setup</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
+            <artifactId>referral</artifactId>
             <version>${project.version}</version>
         </dependency>
 

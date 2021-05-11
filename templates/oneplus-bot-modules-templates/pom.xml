@@ -12,8 +12,9 @@
     <packaging>pom</packaging>
     <version>1.3.11-SNAPSHOT</version>
     <modules>
-        <module>starboard-custom</module>
+        <module>starboard-custom-templates</module>
         <module>news-templates</module>
+        <module>referral-templates</module>
     </modules>
 
 

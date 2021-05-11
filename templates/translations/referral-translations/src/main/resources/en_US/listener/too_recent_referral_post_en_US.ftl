@@ -1,0 +1,1 @@
+The last referral post was too recent. See the footer for the next time you can retry

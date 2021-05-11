@@ -159,6 +159,16 @@
                             <destFileName>news.zip</destFileName>
                         </artifactItem>
 
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.modules</groupId>
+                            <artifactId>referral-templates</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>referral.zip</destFileName>
+                        </artifactItem>
+
                         <!-- translation artefacts -->
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.translations</groupId>
@@ -268,7 +278,7 @@
 
                         <artifactItem>
                             <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
-                            <artifactId>starboard-custom</artifactId>
+                            <artifactId>starboard-custom-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -289,12 +299,22 @@
 
                         <artifactItem>
                             <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
-                            <artifactId>setups-translations</artifactId>
+                            <artifactId>setup-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
-                            <destFileName>setups.zip</destFileName>
+                            <destFileName>setup.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+                            <artifactId>referral-translations</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>referral.zip</destFileName>
                         </artifactItem>
 
                         <!-- liquibase artifacts -->
@@ -456,13 +476,24 @@
 
                         <artifactItem>
                             <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
-                            <artifactId>setups</artifactId>
+                            <artifactId>setup</artifactId>
                             <version>${project.version}</version>
                             <classifier>liquibase</classifier>
                             <type>zip</type>
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
-                            <destFileName>setups.zip</destFileName>
+                            <destFileName>setup.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
+                            <artifactId>referral</artifactId>
+                            <version>${project.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>referral.zip</destFileName>
                         </artifactItem>
 
                         <!-- overrides -->
