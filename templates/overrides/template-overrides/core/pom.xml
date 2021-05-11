@@ -3,7 +3,7 @@
     <parent>
         <artifactId>template-overrides</artifactId>
         <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
-        <version>1.3.11-SNAPSHOT</version>
+        <version>1.3.11</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
