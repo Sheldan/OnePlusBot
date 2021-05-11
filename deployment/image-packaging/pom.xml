@@ -287,6 +287,16 @@
                             <destFileName>news.zip</destFileName>
                         </artifactItem>
 
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+                            <artifactId>setups-translations</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>setups.zip</destFileName>
+                        </artifactItem>
+
                         <!-- liquibase artifacts -->
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto.scheduling</groupId>
@@ -442,6 +452,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
                             <destFileName>news.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
+                            <artifactId>setups</artifactId>
+                            <version>${project.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>setups.zip</destFileName>
                         </artifactItem>
 
                         <!-- overrides -->

@@ -7,7 +7,7 @@
   "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "suggestion",
     "remind", "logging", "invite-filter",
     "starboard-custom",
-    "news"],
+    "news", "setups"],
   "liquibase_artifacts": [
     { "zip": "scheduling", "file": "scheduling-changeLog.xml" },
     { "zip": "core", "file": "core-changeLog.xml" },
@@ -20,6 +20,7 @@
     { "zip": "logging", "file": "logging-changeLog.xml"},
     { "zip": "suggestion", "file": "suggestion-changeLog.xml"},
     { "zip": "invite-filter", "file": "inviteFilter-changeLog.xml"},
+    { "zip": "setups", "file": "setups-changeLog.xml"},
     { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"},
     { "zip": "news", "file": "news-changeLog.xml"}
   ]

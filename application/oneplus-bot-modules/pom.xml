@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>news</module>
+        <module>setups</module>
     </modules>
 
     <properties>

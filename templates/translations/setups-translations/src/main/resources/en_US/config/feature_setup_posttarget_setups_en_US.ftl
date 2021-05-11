@@ -1,0 +1,1 @@
+The channel which should be scanned for setups. Currently: ${currentTarget}

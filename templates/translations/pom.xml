@@ -13,5 +13,6 @@
     <modules>
         <module>starboard-custom-translations</module>
         <module>news-translations</module>
+        <module>setups-translations</module>
     </modules>
 </project>
