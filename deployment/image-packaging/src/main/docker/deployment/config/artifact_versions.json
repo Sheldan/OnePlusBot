@@ -1,11 +1,11 @@
 {
   "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "logging",
-    "suggestion", "invite-filter",
+    "suggestion", "invite-filter", "profanity-filter",
     "starboard-custom",
     "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging",
     "news", "referral"],
   "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "suggestion",
-    "remind", "logging", "invite-filter",
+    "remind", "logging", "invite-filter", "profanity-filter",
     "starboard-custom",
     "news", "setup", "referral"],
   "liquibase_artifacts": [
@@ -20,6 +20,7 @@
     { "zip": "logging", "file": "logging-changeLog.xml"},
     { "zip": "suggestion", "file": "suggestion-changeLog.xml"},
     { "zip": "invite-filter", "file": "inviteFilter-changeLog.xml"},
+    { "zip": "profanity-filter", "file": "profanityFilter-changeLog.xml"},
     { "zip": "setup", "file": "setup-changeLog.xml"},
     { "zip": "referral", "file": "referral-changeLog.xml"},
     { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"},

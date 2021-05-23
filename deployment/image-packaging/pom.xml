@@ -140,6 +140,16 @@
                         </artifactItem>
 
                         <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.templates</groupId>
+                            <artifactId>profanity-filter</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>profanity-filter.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
                             <groupId>dev.sheldan.oneplus.bot.templates.modules</groupId>
                             <artifactId>starboard-custom-templates</artifactId>
                             <version>${project.version}</version>
@@ -264,6 +274,16 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>invite-filter.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.translations</groupId>
+                            <artifactId>profanity-filter</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>profanity-filter.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
@@ -438,6 +458,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
                             <destFileName>invite-filter.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto.modules</groupId>
+                            <artifactId>profanity-filter-impl</artifactId>
+                            <version>${abstracto.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>profanity-filter.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
