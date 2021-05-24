@@ -2,7 +2,7 @@
   "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "logging",
     "suggestion", "invite-filter", "profanity-filter", "statistic",
     "starboard-custom",
-    "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging",
+    "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging", "overrides-templates-statistic",
     "news", "referral"],
   "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "suggestion",
     "remind", "logging", "invite-filter", "profanity-filter", "statistic",

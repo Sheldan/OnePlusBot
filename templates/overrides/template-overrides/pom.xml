@@ -16,6 +16,7 @@
         <module>webservices</module>
         <module>core</module>
         <module>logging</module>
+        <module>statistic</module>
     </modules>
 
 </project>
