@@ -34,5 +34,5 @@ jobs:
         env:
           REGISTRY_PREFIX: docker.pkg.github.com/sheldan/oneplusbot/
           VERSION: ${{ env.version }}
-          ABSTRACTO_VERSION: 1.2.13
+          ABSTRACTO_VERSION: 1.2.14
           ABSTRACTO_REGISTRY_PREFIX: docker.pkg.github.com/sheldan/abstracto/
