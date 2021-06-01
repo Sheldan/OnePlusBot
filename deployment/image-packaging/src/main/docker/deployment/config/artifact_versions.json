@@ -1,11 +1,11 @@
 {
   "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "logging",
-    "suggestion", "invite-filter", "profanity-filter", "statistic", "experience-tracking",
+    "suggestion", "invite-filter", "profanity-filter", "statistic", "experience-tracking", "moderation",
     "starboard-custom",
     "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging", "overrides-templates-statistic",
     "news", "referral"],
   "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "suggestion",
-    "remind", "logging", "invite-filter", "profanity-filter", "statistic", "experience-tracking",
+    "remind", "logging", "invite-filter", "profanity-filter", "statistic", "experience-tracking", "moderation",
     "starboard-custom",
     "news", "setup", "referral"],
   "liquibase_artifacts": [
@@ -22,9 +22,10 @@
     { "zip": "invite-filter", "file": "inviteFilter-changeLog.xml"},
     { "zip": "profanity-filter", "file": "profanityFilter-changeLog.xml"},
     { "zip": "statistic", "file": "statistic-changeLog.xml"},
+    { "zip": "experience-tracking", "file": "experience-changeLog.xml"},
+    { "zip": "moderation", "file": "moderation-changeLog.xml"},
     { "zip": "setup", "file": "setup-changeLog.xml"},
     { "zip": "referral", "file": "referral-changeLog.xml"},
-    { "zip": "experience-tracking", "file": "experience-changeLog.xml"},
     { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"},
     { "zip": "news", "file": "news-changeLog.xml"}
   ]
