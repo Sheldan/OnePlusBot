@@ -29,7 +29,26 @@
 
     </appender>
 
+    <appender name="requests-file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/requests_log.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>
+                ${LOG_PATH}/archived/requests_log_%d{dd-MM-yyyy}.log
+            </fileNamePattern>
+            <maxHistory>10</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
     <logger name="dev.sheldan.abstracto" level="INFO"/>
+    <logger name="dev.sheldan.abstracto.core.logging" level="DEBUG">
+        <appender-ref ref="requests-file"/>
+    </logger>
 
     <root level="info">
         <appender-ref ref="logFileAppender"/>
