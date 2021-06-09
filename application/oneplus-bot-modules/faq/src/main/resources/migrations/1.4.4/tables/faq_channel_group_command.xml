@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog dbchangelog.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext dbchangelog.xsd
+    http://www.liquibase.org/xml/ns/pro dbchangelog.xsd" >
+    <changeSet author="Sheldan" id="faq_channel_group_command-table">
+        <createTable tableName="faq_channel_group_command">
+            <column name="channel_group_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="command_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created" type="TIMESTAMP WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uses" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated" type="TIMESTAMP WITHOUT TIME ZONE"/>
+        </createTable>
+        <addPrimaryKey columnNames="channel_group_id, command_id" tableName="faq_channel_group_command" constraintName="pk_faq_channel_group_command" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="channel_group_id" baseTableName="faq_channel_group_command" constraintName="fk_faq_channel_group_command_channel_group"
+                                 deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="faq_channel_group" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="command_id" baseTableName="faq_channel_group_command" constraintName="fk_faq_channel_group_command_faq_command"
+                                 deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="faq_command" validate="true"/>
+        <sql>
+            DROP TRIGGER IF EXISTS faq_channel_group_command_insert_trigger ON faq_channel_group_command;
+            CREATE TRIGGER faq_channel_group_command_insert_trigger BEFORE INSERT ON faq_channel_group_command FOR EACH ROW EXECUTE PROCEDURE insert_trigger_procedure();
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

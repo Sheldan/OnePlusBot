@@ -1,0 +1,1 @@
+A position in channel group ${channelGroupName} of FAQ command ${commandName} is duplicated.

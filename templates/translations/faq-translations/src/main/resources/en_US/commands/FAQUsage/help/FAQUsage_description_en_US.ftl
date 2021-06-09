@@ -1,0 +1,1 @@
+Shows the amount of times faq commands have been used

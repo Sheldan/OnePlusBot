@@ -1,0 +1,1 @@
+Shows pre configured responses for different commands in different channels

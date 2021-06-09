@@ -1,0 +1,1 @@
+Exports the FAQ configuration into JSON format

@@ -1,0 +1,1 @@
+The FAQ commands ${commandNames} are configured as global, but they do have more than one response configured.

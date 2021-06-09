@@ -15,6 +15,7 @@
         <module>starboard-custom-templates</module>
         <module>news-templates</module>
         <module>referral-templates</module>
+        <module>faq-templates</module>
     </modules>
 
 

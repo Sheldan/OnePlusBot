@@ -14,6 +14,7 @@
         <module>news</module>
         <module>setup</module>
         <module>referral</module>
+        <module>faq</module>
     </modules>
 
     <properties>

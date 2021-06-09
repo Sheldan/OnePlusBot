@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "minItems": 1,
+  "maxItems": 30,
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "faqCommandName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30,
+          "pattern": "\\w*"
+        },
+        "global": {
+          "default": false,
+          "type": "boolean"
+        },
+        "aliases": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30,
+            "pattern": "\\w*"
+          }
+        },
+        "responses": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 255,
+          "items": {
+            "type": "object",
+            "properties": {
+              "channelGroupName": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20,
+                "pattern": "\\w*"
+              },
+              "messages": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 3,
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "position": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 2
+                      },
+                      "additionalMessage": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      },
+                      "embed": {
+                        "type": "object",
+                        "properties": {
+                          "description": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 2000
+                          },
+                          "imageUrl": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 2000,
+                            "pattern": "\\s*https?:\/\/\\S+"
+                          },
+                          "color": {
+                            "type": "object",
+                            "properties": {
+                              "red": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "default": 0,
+                                "maximum": 255
+                              },
+                              "green": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "default": 0,
+                                "maximum": 255
+                              },
+                              "blue": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "default": 0,
+                                "maximum": 255
+                              }
+                            },
+                            "required": [
+                              "red",
+                              "green",
+                              "blue"
+                            ]
+                          },
+                          "author": {
+                            "type": "object",
+                            "properties": {
+                              "userId": {
+                                "minimum": 1,
+                                "maximum": 18446744073709551615,
+                                "type": "integer"
+                              },
+                              "useBot": {
+                                "type": "boolean"
+                              }
+                            },
+                            "additionalProperties": false,
+                            "anyOf": [
+                              {
+                                "required": [
+                                  "userId"
+                                ]
+                              },
+                              {
+                                "required": [
+                                  "useBot"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "additionalProperties": false,
+                        "anyOf": [
+                          {
+                            "required": [
+                              "description",
+                              "author"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "imageUrl",
+                              "author"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "additionalProperties": false,
+                    "anyOf": [
+                      {
+                        "required": [
+                          "additionalMessage",
+                          "position"
+                        ]
+                      },
+                      {
+                        "required": [
+                          "embed",
+                          "position"
+                        ]
+                      },
+                      {
+                        "required": [
+                          "additionalMessage",
+                          "embed",
+                          "position"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "channelGroupName",
+              "messages"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "faqCommandName",
+        "responses"
+      ]
+    }
+  ]
+}

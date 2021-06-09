@@ -1,0 +1,1 @@
+Global channel group will be created for the purpose of global faq commands.

@@ -15,5 +15,6 @@
         <module>news-translations</module>
         <module>setup-translations</module>
         <module>referral-translations</module>
+        <module>faq-translations</module>
     </modules>
 </project>

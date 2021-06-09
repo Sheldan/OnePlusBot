@@ -6,6 +6,6 @@ and most of them will be in [abstracto](https://github.com/Sheldan/abstracto), b
 The migration of the existing data from the database is handled via one time migration, and can be found [here](https://github.com/Sheldan/OnePlusBot-migration).
 
 Custom features which were ported
- - [ ] FAQ
+ - [x] FAQ
  - [x] Setup channel handling
  - [x] Referral link handling 

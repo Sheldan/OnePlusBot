@@ -1,0 +1,1 @@
+The alias ${aliasName} in command ${commandName} is duplicated in command ${originalCommandName}.

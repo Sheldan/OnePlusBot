@@ -1,0 +1,1 @@
+The channel to get the FAQ response in

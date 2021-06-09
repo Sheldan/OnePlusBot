@@ -1,0 +1,1 @@
+This command can be used to show the currently configured FAQ commands, the channel groups they have responses in and how many responses there are.

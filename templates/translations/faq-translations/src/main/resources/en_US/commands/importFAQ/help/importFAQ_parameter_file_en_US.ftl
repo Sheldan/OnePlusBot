@@ -1,0 +1,1 @@
+The JSON file containing the FAQ configuration as attachment

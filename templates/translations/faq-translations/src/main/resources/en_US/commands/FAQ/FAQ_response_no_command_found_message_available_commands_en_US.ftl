@@ -1,0 +1,1 @@
+The following commands are available in the given channel: ${commandNames}.

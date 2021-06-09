@@ -1,0 +1,1 @@
+The commands ${commandKeys} have duplicates names for command or aliases.

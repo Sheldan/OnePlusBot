@@ -1,0 +1,1 @@
+This command is used to update the current FAQ configuration. It uses a file, containing the configuration as a parameter.

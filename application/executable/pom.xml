@@ -154,6 +154,12 @@
             <version>${project.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
+            <artifactId>faq</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>

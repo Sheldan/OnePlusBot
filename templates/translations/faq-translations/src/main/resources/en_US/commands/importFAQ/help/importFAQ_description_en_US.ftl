@@ -1,0 +1,1 @@
+Updates the current FAQ configuration for this server

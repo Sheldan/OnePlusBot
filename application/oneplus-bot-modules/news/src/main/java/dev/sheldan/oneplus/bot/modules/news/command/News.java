@@ -1,4 +1,4 @@
-package dev.sheldan.oneplus.bot.modules.news.commands;
+package dev.sheldan.oneplus.bot.modules.news.command;
 
 import dev.sheldan.abstracto.core.command.condition.AbstractConditionableCommand;
 import dev.sheldan.abstracto.core.command.config.CommandConfiguration;
