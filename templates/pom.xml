@@ -4,7 +4,7 @@
     <parent>
         <groupId>dev.sheldan.oneplus.bot</groupId>
         <artifactId>oneplusbot</artifactId>
-        <version>1.4.4-SNAPSHOT</version>
+        <version>1.4.4</version>
     </parent>
 
     <modules>
@@ -15,7 +15,7 @@
 
     <groupId>dev.sheldan.oneplus.bot.templates</groupId>
     <artifactId>templates</artifactId>
-    <version>1.4.4-SNAPSHOT</version>
+    <version>1.4.4</version>
     <packaging>pom</packaging>
 
 </project>
