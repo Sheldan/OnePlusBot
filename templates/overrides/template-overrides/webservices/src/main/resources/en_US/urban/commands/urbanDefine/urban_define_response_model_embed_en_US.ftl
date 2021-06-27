@@ -9,6 +9,7 @@
       {
             "name": "<@safe_include "urban_search_command_response_embed_field_title_example"/>",
             "value": "${definition.example?json_string}",
+            "valueLengthLimit": 250,
             "inline": "true"
       }
   ],
