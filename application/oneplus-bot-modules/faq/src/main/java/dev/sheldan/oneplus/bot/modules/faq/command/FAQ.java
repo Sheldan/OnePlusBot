@@ -104,7 +104,6 @@ public class FAQ extends AbstractConditionableCommand {
                 .help(helpInfo)
                 .async(true)
                 .templated(true)
-                .causesReaction(true)
                 .build();
     }
 
