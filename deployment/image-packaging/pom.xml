@@ -63,6 +63,17 @@
                             <destFileName>experience-tracking.zip</destFileName>
                         </artifactItem>
 
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.templates</groupId>
+                            <artifactId>modmail</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>modmail.zip</destFileName>
+                        </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.templates</groupId>
                             <artifactId>moderation</artifactId>
@@ -234,6 +245,16 @@
 
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.translations</groupId>
+                            <artifactId>modmail</artifactId>
+                            <version>${abstracto.templates.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>modmail.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto-templates.translations</groupId>
                             <artifactId>utility</artifactId>
                             <version>${abstracto.templates.version}</version>
                             <type>zip</type>
@@ -241,6 +262,7 @@
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>utility.zip</destFileName>
                         </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.translations</groupId>
                             <artifactId>experience-tracking</artifactId>
@@ -250,6 +272,7 @@
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>experience-tracking.zip</destFileName>
                         </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.translations</groupId>
                             <artifactId>entertainment</artifactId>
@@ -259,6 +282,7 @@
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>entertainment.zip</destFileName>
                         </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.translations</groupId>
                             <artifactId>moderation</artifactId>
@@ -268,6 +292,7 @@
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>moderation.zip</destFileName>
                         </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.translations</groupId>
                             <artifactId>link-embed</artifactId>
@@ -277,6 +302,7 @@
                             <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
                             <destFileName>link-embed.zip</destFileName>
                         </artifactItem>
+
                         <artifactItem>
                             <groupId>dev.sheldan.abstracto-templates.translations</groupId>
                             <artifactId>starboard</artifactId>
@@ -450,6 +476,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
                             <destFileName>utility.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.abstracto.modules</groupId>
+                            <artifactId>modmail-impl</artifactId>
+                            <version>${abstracto.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>modmail.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>
@@ -694,6 +731,38 @@
                             <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
                             <destFileName>overrides-templates-statistic.zip</destFileName>
                         </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
+                            <artifactId>modmail</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>overrides-templates-modmail.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
+                            <artifactId>moderation</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/template-artifacts/</outputDirectory>
+                            <destFileName>overrides-templates-moderation.zip</destFileName>
+                        </artifactItem>
+
+                        <!-- overrides translations -->
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.translations</groupId>
+                            <artifactId>moderation</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>overrides-translation-moderation.zip</destFileName>
+                        </artifactItem>
+
 
                     </artifactItems>
                 </configuration>

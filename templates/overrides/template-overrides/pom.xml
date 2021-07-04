@@ -17,6 +17,8 @@
         <module>core</module>
         <module>logging</module>
         <module>statistic</module>
+        <module>modmail</module>
+        <module>moderation</module>
     </modules>
 
 </project>
