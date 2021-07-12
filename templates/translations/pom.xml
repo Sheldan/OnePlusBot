@@ -16,5 +16,6 @@
         <module>setup-translations</module>
         <module>referral-translations</module>
         <module>faq-translations</module>
+        <module>dynamic-activity-custom-translations</module>
     </modules>
 </project>

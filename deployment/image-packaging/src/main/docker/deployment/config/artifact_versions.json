@@ -1,13 +1,15 @@
 {
   "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "logging",
-    "suggestion", "invite-filter", "profanity-filter", "statistic", "experience-tracking", "moderation", "modmail",
+    "suggestion", "invite-filter", "profanity-filter", "statistic", "experience-tracking", "moderation", "modmail", "assignable-roles",
+    "voice-channel-context",
     "starboard-custom",
     "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging", "overrides-templates-statistic",
     "overrides-templates-modmail", "overrides-templates-moderation",
     "news", "referral", "faq"],
   "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "suggestion",
-    "remind", "logging", "invite-filter", "profanity-filter", "statistic", "experience-tracking", "moderation", "modmail",
-    "starboard-custom",
+    "remind", "logging", "invite-filter", "profanity-filter", "statistic", "experience-tracking", "moderation", "modmail", "assignable-roles",
+    "voice-channel-context",
+    "starboard-custom", "dynamic-activity-custom-translations",
     "overrides-translation-moderation",
     "news", "setup", "referral", "faq"],
   "liquibase_artifacts": [
@@ -27,9 +29,13 @@
     { "zip": "experience-tracking", "file": "experience-changeLog.xml"},
     { "zip": "moderation", "file": "moderation-changeLog.xml"},
     { "zip": "modmail", "file": "modMail-changeLog.xml"},
+    { "zip": "assignable-roles", "file": "assignableRoles-changeLog.xml"},
+    { "zip": "voice-channel-context", "file": "voiceChannelContext-changeLog.xml"},
+    { "zip": "dynamic-activity", "file": "dynamicActivity-changeLog.xml"},
     { "zip": "setup", "file": "setup-changeLog.xml"},
     { "zip": "referral", "file": "referral-changeLog.xml"},
     { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"},
+    { "zip": "dynamic-activity-custom", "file": "dynamicActivity-custom-changeLog.xml"},
     { "zip": "news", "file": "news-changeLog.xml"},
     { "zip": "faq", "file": "faq-changeLog.xml"}
   ]

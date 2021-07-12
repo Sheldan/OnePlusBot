@@ -13,5 +13,6 @@
 
     <modules>
         <module>starboard-custom</module>
+        <module>dynamic-activity-custom</module>
     </modules>
 </project>
