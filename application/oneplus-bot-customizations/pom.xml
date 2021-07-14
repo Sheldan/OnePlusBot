@@ -14,5 +14,6 @@
     <modules>
         <module>starboard-custom</module>
         <module>dynamic-activity-custom</module>
+        <module>moderation-custom</module>
     </modules>
 </project>
