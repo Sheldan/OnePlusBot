@@ -96,6 +96,9 @@ The detailed list of what information is stored and processed is the following:
     * the ID of the user to be used as author
 * the amount of times a FAQ response has been used
 
+### Assignable roles
+* the names of assignable role places and assignable role button text, together with the associated emote markdown (if given)
+* the assigned assignable roles for each member in order to provide the 'unique' assignable role functionality
 
 ## Grafana dashboard
 
