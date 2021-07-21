@@ -3,14 +3,14 @@
     <parent>
         <groupId>dev.sheldan.oneplus.bot.templates</groupId>
         <artifactId>templates</artifactId>
-        <version>1.5.3-SNAPSHOT</version>
+        <version>1.5.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.sheldan.oneplus.bot.templates.modules</groupId>
     <artifactId>oneplus-bot-modules-templates</artifactId>
     <packaging>pom</packaging>
-    <version>1.5.3-SNAPSHOT</version>
+    <version>1.5.3</version>
     <modules>
         <module>starboard-custom-templates</module>
         <module>news-templates</module>
