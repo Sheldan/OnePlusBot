@@ -25,6 +25,8 @@ services:
       DB_PORT: ${DATABASE_PORT}
       DB_USER: ${DATABASE_USER}
       DB_NAME: ${DATABASE_NAME}
+      ABSTRACTO_GRAFANA_DB_PASS: ${GRAFANA_DATABASE_PASSWORD}
+      ABSTRACTO_GRAFANA_DB_USER: ${GRAFANA_DATABASE_USER}
       EXECUTE_DEPLOYMENT: ${EXECUTE_DEPLOYMENT}
       EXECUTE_LIQUIBASE: ${EXECUTE_LIQUIBASE}
       EXECUTE_TEMPLATES: ${EXECUTE_TEMPLATES}
@@ -95,6 +97,14 @@ services:
     ports:
       - "127.0.0.1:${GRAFANA_PORT}:3000"
     restart: unless-stopped
+    environment:
+      DB_PASS: ${GRAFANA_DATABASE_PASSWORD}
+      DB_HOST: ${DATABASE_HOST}
+      DB_PORT: ${DATABASE_PORT}
+      DB_USER: ${GRAFANA_DATABASE_USER}
+      DB_NAME: ${DATABASE_NAME}
+      PROMETHEUS_HOST: 'prometheus'
+      PROMETHEUS_PORT: 9090
     volumes:
       - grafana-user-data:/var/lib/grafana
     networks:

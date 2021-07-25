@@ -34,6 +34,7 @@
     { "zip": "anti-raid", "file": "antiRaid-changeLog.xml"},
     { "zip": "dynamic-activity", "file": "dynamicActivity-changeLog.xml"},
     { "zip": "setup", "file": "setup-changeLog.xml"},
+    { "zip": "database", "file": "changeLog.xml"},
     { "zip": "referral", "file": "referral-changeLog.xml"},
     { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"},
     { "zip": "moderation-custom", "file": "moderation-custom-changeLog.xml"},

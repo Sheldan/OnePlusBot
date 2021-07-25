@@ -834,6 +834,17 @@
                             <destFileName>faq.zip</destFileName>
                         </artifactItem>
 
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.application</groupId>
+                            <artifactId>database</artifactId>
+                            <version>${project.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>database.zip</destFileName>
+                        </artifactItem>
+
                         <!-- overrides -->
 
                         <artifactItem>
