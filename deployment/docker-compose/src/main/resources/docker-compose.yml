@@ -109,6 +109,28 @@ services:
       - grafana-user-data:/var/lib/grafana
     networks:
       - oneplusbot
+  promtail:
+    container_name: promtail
+    image: ${REGISTRY_PREFIX}oneplus_bot_promtail:${ONEPLUS_BOT_VERSION}
+    depends_on:
+      - bot
+    restart: unless-stopped
+    command: -config.file=/mnt/config/promtail-config.yaml
+    volumes:
+      - bot-logs:/logs
+    networks:
+      - oneplusbot
+  loki:
+    container_name: loki
+    image: ${REGISTRY_PREFIX}oneplus_bot_loki:${ONEPLUS_BOT_VERSION}
+    depends_on:
+      - promtail
+    command: -config.file=/mnt/config/loki-config.yaml
+    ports:
+      - "127.0.0.1:${LOKI_PORT}:3100"
+    restart: unless-stopped
+    networks:
+      - oneplusbot
 
 networks:
   oneplusbot:
