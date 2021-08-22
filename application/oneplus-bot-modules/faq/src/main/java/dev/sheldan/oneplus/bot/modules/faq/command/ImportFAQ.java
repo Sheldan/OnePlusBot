@@ -66,6 +66,7 @@ public class ImportFAQ extends AbstractConditionableCommand {
                 AServer server = serverManagementService.loadServer(commandContext.getGuild());
                 List<FaqCommandConfig> commands = faqServiceBean.loadFAQCommandsFromJson(jsonContent);
                 faqServiceBean.createOrUpdateFAQCommands(commands, server);
+                return CompletableFuture.completedFuture(CommandResult.fromSuccess());
             } else {
 
                 List<String> errors = jsonValidationService.getDetailedException(result.getExceptions())
@@ -73,8 +74,8 @@ public class ImportFAQ extends AbstractConditionableCommand {
                         .map(ValidationException::getMessage)
                         .collect(Collectors.toList());
                 channelService.sendTextToChannel(String.join("\n", errors), commandContext.getChannel());
+                return CompletableFuture.completedFuture(CommandResult.fromError("Incorrect faq config."));
             }
-            return CompletableFuture.completedFuture(CommandResult.fromSuccess());
         } catch (IOException e) {
             log.error("IO Exception when loading input file.", e);
             throw new AbstractoTemplatedException("Failed to load json config.", "failed_to_set_template_exception", e);
