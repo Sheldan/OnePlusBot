@@ -32,7 +32,7 @@ services:
       EXECUTE_TEMPLATES: ${EXECUTE_TEMPLATES}
       LIQUIBASE_PATH: ${LIQUIBASE_PATH:-/liquibase}
       POSTGRES_DRIVER_PATH: ${EXECUTE_DEPLOYMENT:-/postgres/driver.jar}
-      WAIT_HOSTS: database:5432
+      WAIT_HOSTS: ${DATABASE_HOST}:${DATABASE_PORT}
     networks:
       - oneplusbot
   bot:
@@ -105,6 +105,8 @@ services:
       DB_NAME: ${DATABASE_NAME}
       PROMETHEUS_HOST: 'prometheus'
       PROMETHEUS_PORT: 9090
+      LOKI_HOST: 'loki'
+      LOKI_PORT: ${LOKI_PORT}
     volumes:
       - grafana-user-data:/var/lib/grafana
     networks:

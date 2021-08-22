@@ -21,3 +21,9 @@ datasources:
        sslmode: 'disable'
     version: 1
     editable: false
+  - name: Loki
+    type: loki
+    access: proxy
+    url: 'http://${LOKI_HOST}:${LOKI_PORT}'
+    jsonData:
+      maxLines: 2000
