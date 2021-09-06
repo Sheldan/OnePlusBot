@@ -19,8 +19,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <!-- edit in release.yml as well -->
         <!-- when releasing a new opbot version, update the .env as well-->
-        <abstracto.version>1.3.7</abstracto.version>
-        <abstracto.templates.version>1.2.19</abstracto.templates.version>
+        <abstracto.version>1.3.8</abstracto.version>
+        <abstracto.templates.version>1.2.20</abstracto.templates.version>
     </properties>
 
     <modules>

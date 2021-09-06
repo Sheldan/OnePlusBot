@@ -17,4 +17,5 @@ Custom features which were ported
 - [pgAdmin](https://github.com/postgres/pgadmin4) to view the database
 - [prometheus](https://github.com/prometheus/prometheus) for metric collection
 - [postgres](https://github.com/postgres/postgres) as a database
+- [loki](https://github.com/grafana/loki) for log aggregation
   

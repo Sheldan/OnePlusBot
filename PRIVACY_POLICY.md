@@ -1,6 +1,6 @@
 # r/oneplus Discord bot privacy policy
 
-Last updated: 04.07.2021
+Last updated: 06.09.2021
 
 ## Description
 
@@ -75,6 +75,7 @@ The detailed list of what information is stored and processed is the following:
     * this was used for the message used to update the status of a suggestion, but this is currently disabled
 * the author of the suggestion and the message which has been posted in the suggestions channel
 * every suggestion will be deleted completely from the database a few days after it has reached a final state (rejected, denied, accepted)
+* whether you voted for a suggestion and which decision you took
 
 ### Leveling system
 * the amount of messages which were considered for the leveling system
