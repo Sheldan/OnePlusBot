@@ -65,7 +65,8 @@ public class FAQCommandConfigConverter {
 
     private FaqCommandResponseMessageConfig convertCommandResponse(FAQCommandResponse response, Long botUserId) {
         FaqCommandResponseEmbedConfig embedConfig = null;
-        if(response.getDescription() != null) {
+        // one of those must not be null, for it to be considered a proper embed
+        if(response.getDescription() != null || response.getImageURL() != null) {
             boolean useBot = response.getAuthorUserId().equals(botUserId);
             FaqCommandResponseEmbedColorConfig colorConfig = FaqCommandResponseEmbedColorConfig
                     .builder()
