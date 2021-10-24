@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+        <artifactId>translations</artifactId>
+        <version>1.5.8-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dev.sheldan.oneplus.bot.templates.translations.modules</groupId>
+    <artifactId>module-translations</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>faq-translations</module>
+        <module>news-translations</module>
+        <module>referral-translations</module>
+        <module>setup-translations</module>
+    </modules>
+
+</project>

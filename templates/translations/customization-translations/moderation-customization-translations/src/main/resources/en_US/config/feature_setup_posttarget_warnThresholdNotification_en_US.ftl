@@ -1,0 +1,1 @@
+The channel in which warn threshold notifications should be sent to. Default: ${defaultValue}

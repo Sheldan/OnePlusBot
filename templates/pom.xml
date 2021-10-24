@@ -8,9 +8,8 @@
     </parent>
 
     <modules>
-        <module>oneplus-bot-modules-templates</module>
+        <module>oneplus-bot-templates</module>
         <module>translations</module>
-        <module>overrides</module>
     </modules>
 
     <groupId>dev.sheldan.oneplus.bot.templates</groupId>

@@ -1,0 +1,1 @@
+The user ${warnedMemberMention} (${warnedUserId?c}) has reached ${warnCount} warnings.

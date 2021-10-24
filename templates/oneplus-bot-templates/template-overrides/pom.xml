@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>dev.sheldan.oneplus.bot.templates</groupId>
+        <artifactId>oneplus-bot-templates</artifactId>
+        <version>1.5.8-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dev.sheldan.oneplus.bot.templates.overrides</groupId>
+    <artifactId>template-overrides</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>webservices-template-overrides</module>
+        <module>core-template-overrides</module>
+        <module>logging-template-overrides</module>
+        <module>statistic-template-overrides</module>
+        <module>modmail-template-overrides</module>
+        <module>moderation-template-overrides</module>
+    </modules>
+
+</project>

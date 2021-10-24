@@ -7,12 +7,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
-    <artifactId>translations</artifactId>
+    <artifactId>oneplus-bot-templates</artifactId>
     <packaging>pom</packaging>
+    <version>1.5.8-SNAPSHOT</version>
     <modules>
-        <module>customization-translations</module>
-        <module>module-translations</module>
-        <module>translation-overrides</module>
+        <module>module-templates</module>
+        <module>customization-templates</module>
+        <module>template-overrides</module>
     </modules>
+
+
 </project>

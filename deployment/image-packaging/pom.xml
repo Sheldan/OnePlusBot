@@ -221,8 +221,8 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.modules</groupId>
-                            <artifactId>starboard-custom-templates</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.customizations</groupId>
+                            <artifactId>starboard-customization-templates</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -453,8 +453,8 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
-                            <artifactId>starboard-custom-translations</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.customizations</groupId>
+                            <artifactId>starboard-customization-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -463,8 +463,8 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
-                            <artifactId>moderation-custom</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.customizations</groupId>
+                            <artifactId>moderation-customization-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -473,7 +473,7 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.customizations</groupId>
                             <artifactId>dynamic-activity-custom-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
@@ -484,7 +484,7 @@
 
                         <!-- custom -->
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.modules</groupId>
                             <artifactId>news-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
@@ -494,7 +494,7 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.modules</groupId>
                             <artifactId>setup-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
@@ -504,7 +504,7 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.modules</groupId>
                             <artifactId>referral-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
@@ -514,7 +514,7 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.modules</groupId>
                             <artifactId>faq-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
@@ -848,8 +848,8 @@
                         <!-- overrides -->
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
-                            <artifactId>core</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides</groupId>
+                            <artifactId>core-template-overrides</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -858,8 +858,8 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
-                            <artifactId>webservices</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides</groupId>
+                            <artifactId>webservices-template-overrides</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -868,8 +868,8 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
-                            <artifactId>logging</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides</groupId>
+                            <artifactId>logging-template-overrides</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -879,8 +879,8 @@
 
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
-                            <artifactId>statistic</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides</groupId>
+                            <artifactId>statistic-template-overrides</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -889,8 +889,8 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
-                            <artifactId>modmail</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides</groupId>
+                            <artifactId>modmail-template-overrides</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -899,8 +899,8 @@
                         </artifactItem>
 
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.templates</groupId>
-                            <artifactId>moderation</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.overrides</groupId>
+                            <artifactId>moderation-template-overrides</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>
@@ -910,8 +910,8 @@
 
                         <!-- overrides translations -->
                         <artifactItem>
-                            <groupId>dev.sheldan.oneplus.bot.templates.overrides.translations</groupId>
-                            <artifactId>moderation</artifactId>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.overrides</groupId>
+                            <artifactId>moderation-translation-overrides</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
                             <overWrite>true</overWrite>

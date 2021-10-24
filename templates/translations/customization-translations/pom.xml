@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>dev.sheldan.oneplus.bot.templates.translations</groupId>
+        <artifactId>translations</artifactId>
+        <version>1.5.8-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dev.sheldan.oneplus.bot.templates.translations.customizations</groupId>
+    <artifactId>customization-translations</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>dynamic-activity-customization-translations</module>
+        <module>moderation-customization-translations</module>
+        <module>starboard-customization-translations</module>
+    </modules>
+
+</project>
