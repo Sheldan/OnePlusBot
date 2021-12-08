@@ -1,6 +1,8 @@
 {
-    <#include "abstracto_color">,
-    "description": "
+    "embeds": [
+        {
+        <#include "abstracto_color">,
+        "description": "
 <#list uses as usage>
 <#assign usage=usage>
 <#assign commandName=usage.faqCommandName><@safe_include "FAQUsage_command_display"/>:
@@ -11,4 +13,6 @@
 <@safe_include "FAQUsage_usage_display"/><#sep>, </#list>
 <#else>
 <@safe_include "FAQUsage_no_usages"/></#list>"
+        }
+    ]
 }

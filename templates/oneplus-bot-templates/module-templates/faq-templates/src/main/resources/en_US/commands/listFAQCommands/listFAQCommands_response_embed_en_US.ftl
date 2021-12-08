@@ -1,7 +1,9 @@
 {
-    <#include "abstracto_color">,
-    "description": "
-    <@safe_include "listFAQCommands_command_header"/>
+    "embeds": [
+        {
+        <#include "abstracto_color">,
+        "description": "
+<@safe_include "listFAQCommands_command_header"/>
 
 <#list commands as command>
 <#assign command=command>
@@ -17,4 +19,6 @@
 
 <#else>
 <@safe_include "listFAQCommands_no_commands"/></#list>"
+        }
+    ]
 }
