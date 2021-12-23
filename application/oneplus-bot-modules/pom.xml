@@ -15,6 +15,7 @@
         <module>setup</module>
         <module>referral</module>
         <module>faq</module>
+        <module>seasonal</module>
     </modules>
 
     <properties>

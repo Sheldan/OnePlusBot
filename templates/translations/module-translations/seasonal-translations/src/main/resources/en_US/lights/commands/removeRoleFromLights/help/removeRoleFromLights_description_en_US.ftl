@@ -1,0 +1,1 @@
+Removes a role from the lights mechanism

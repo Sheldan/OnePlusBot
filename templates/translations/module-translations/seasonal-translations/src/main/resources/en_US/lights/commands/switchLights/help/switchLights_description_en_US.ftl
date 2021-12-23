@@ -1,0 +1,1 @@
+Switches the configured roles to a random color

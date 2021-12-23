@@ -11,7 +11,7 @@
     "voice-channel-context", "anti-raid",
     "starboard-custom", "dynamic-activity-custom-translations", "moderation-custom",
     "overrides-translation-moderation",
-    "news", "setup", "referral", "faq"],
+    "news", "setup", "referral", "faq", "seasonal"],
   "liquibase_artifacts": [
     { "zip": "scheduling", "file": "scheduling-changeLog.xml" },
     { "zip": "core", "file": "core-changeLog.xml" },
@@ -40,7 +40,8 @@
     { "zip": "moderation-custom", "file": "moderation-custom-changeLog.xml"},
     { "zip": "dynamic-activity-custom", "file": "dynamicActivity-custom-changeLog.xml"},
     { "zip": "news", "file": "news-changeLog.xml"},
-    { "zip": "faq", "file": "faq-changeLog.xml"}
+    { "zip": "faq", "file": "faq-changeLog.xml"},
+    { "zip": "seasonal", "file": "seasonal-changeLog.xml"}
   ]
 }
 

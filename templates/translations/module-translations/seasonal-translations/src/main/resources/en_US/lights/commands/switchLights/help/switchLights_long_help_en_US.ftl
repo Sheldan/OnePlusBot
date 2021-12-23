@@ -1,0 +1,1 @@
+This command switches the configured roles to a completely random color.

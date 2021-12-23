@@ -515,6 +515,16 @@
 
                         <artifactItem>
                             <groupId>dev.sheldan.oneplus.bot.templates.translations.modules</groupId>
+                            <artifactId>seasonal-translations</artifactId>
+                            <version>${project.version}</version>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/translation-artifacts/</outputDirectory>
+                            <destFileName>seasonal.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.templates.translations.modules</groupId>
                             <artifactId>faq-translations</artifactId>
                             <version>${project.version}</version>
                             <type>zip</type>
@@ -832,6 +842,17 @@
                             <overWrite>true</overWrite>
                             <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
                             <destFileName>faq.zip</destFileName>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
+                            <artifactId>seasonal</artifactId>
+                            <version>${project.version}</version>
+                            <classifier>liquibase</classifier>
+                            <type>zip</type>
+                            <overWrite>true</overWrite>
+                            <outputDirectory>${file.basedir}/deployment/liquibase-artifacts/</outputDirectory>
+                            <destFileName>seasonal.zip</destFileName>
                         </artifactItem>
 
                         <artifactItem>

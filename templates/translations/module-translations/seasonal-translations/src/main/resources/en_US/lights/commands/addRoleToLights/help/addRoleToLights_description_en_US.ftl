@@ -1,0 +1,1 @@
+Adds a role to the lights mechanism

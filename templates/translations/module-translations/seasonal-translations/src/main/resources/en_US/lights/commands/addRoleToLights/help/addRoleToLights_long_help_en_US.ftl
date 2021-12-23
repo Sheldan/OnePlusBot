@@ -1,0 +1,1 @@
+Adds this role to the mechanism which switches the colors of the defined roles to a random color, when `switchLights` is executed.

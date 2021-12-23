@@ -15,6 +15,7 @@
         <module>news-translations</module>
         <module>referral-translations</module>
         <module>setup-translations</module>
+        <module>seasonal-translations</module>
     </modules>
 
 </project>
