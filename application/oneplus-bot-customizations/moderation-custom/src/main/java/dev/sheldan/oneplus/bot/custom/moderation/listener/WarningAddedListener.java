@@ -19,7 +19,7 @@ import dev.sheldan.oneplus.bot.custom.moderation.config.ModerationCustomFeatureD
 import dev.sheldan.oneplus.bot.custom.moderation.config.ModerationCustomPostTarget;
 import dev.sheldan.oneplus.bot.custom.moderation.model.template.WarningThresholdNotificationModel;
 import lombok.extern.slf4j.Slf4j;
-import net.dv8tion.jda.api.entities.TextChannel;
+import net.dv8tion.jda.api.entities.GuildMessageChannel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -71,7 +71,7 @@ public class WarningAddedListener implements WarningCreatedListener {
 
             Long channelId = model.getWarningChannelId();
             Long warnedUserId = model.getWarnedUserId();
-            TextChannel channel = channelService.getTextChannelFromServer(serverId, channelId);
+            GuildMessageChannel channel = channelService.getMessageChannelFromServer(serverId, channelId);
             WarningThresholdNotificationModel notificationModel = WarningThresholdNotificationModel
                     .builder()
                     .channelDisplay(ChannelDisplay.fromChannel(channel))

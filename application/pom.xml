@@ -38,15 +38,7 @@
             <artifactId>core-int</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>dev.sheldan.abstracto.modules</groupId>
-            <artifactId>utility-int</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>dev.sheldan.abstracto.scheduling</groupId>
-            <artifactId>scheduling-int</artifactId>
-        </dependency>
     </dependencies>
 
 </project>

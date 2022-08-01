@@ -11,8 +11,8 @@ import dev.sheldan.oneplus.bot.modules.news.model.NewsMessageModel;
 import dev.sheldan.oneplus.bot.modules.news.model.database.NewsPost;
 import dev.sheldan.oneplus.bot.modules.news.service.management.NewsPostManagementServiceBean;
 import lombok.extern.slf4j.Slf4j;
+import net.dv8tion.jda.api.entities.GuildMessageChannel;
 import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.TextChannel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -113,7 +113,7 @@ public class NewsServiceBean {
         log.info("Updating news post {} with new content based on message from user {} in server {}.",
                 newsPost.getSourceMessageId(), updatedMessage.getIdLong(), updatedMessage.getGuild().getId());
         MessageToSend messageToSend = templateService.renderEmbedTemplate(MESSAGE_TEMPLATE_KEY, model, serverId);
-        TextChannel newsChannel = channelService.getTextChannelFromServer(serverId, newsPost.getNewsChannel().getId());
+        GuildMessageChannel newsChannel = channelService.getMessageChannelFromServer(serverId, newsPost.getNewsChannel().getId());
         return channelService.editMessageInAChannelFuture(messageToSend, newsChannel, newsPost.getNewsMessageId())
                 .thenApply(message -> null);
     }

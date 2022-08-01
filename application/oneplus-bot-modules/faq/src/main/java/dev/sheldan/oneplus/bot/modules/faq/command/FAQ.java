@@ -17,6 +17,7 @@ import dev.sheldan.oneplus.bot.modules.faq.config.FAQFeatureDefinition;
 import dev.sheldan.oneplus.bot.modules.faq.config.FAQModuleDefinition;
 import dev.sheldan.oneplus.bot.modules.faq.models.command.faq.FAQResponseModel;
 import dev.sheldan.oneplus.bot.modules.faq.service.FAQResponseServiceBean;
+import net.dv8tion.jda.api.entities.GuildMessageChannel;
 import net.dv8tion.jda.api.entities.TextChannel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -50,7 +51,7 @@ public class FAQ extends AbstractConditionableCommand {
         String commandName;
         if(!parameters.isEmpty()) {
             commandName = (String) parameters.get(0);
-            TextChannel channel;
+            GuildMessageChannel channel;
             if (parameters.size() == 2) {
                 channel = (TextChannel) parameters.get(1);
             } else {

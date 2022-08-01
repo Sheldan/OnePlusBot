@@ -22,10 +22,7 @@ import dev.sheldan.oneplus.bot.modules.faq.service.management.FAQChannelGroupCom
 import dev.sheldan.oneplus.bot.modules.faq.service.management.FAQCommandAliasManagementService;
 import dev.sheldan.oneplus.bot.modules.faq.service.management.FAQCommandManagementServiceBean;
 import lombok.extern.slf4j.Slf4j;
-import net.dv8tion.jda.api.entities.ISnowflake;
-import net.dv8tion.jda.api.entities.SelfUser;
-import net.dv8tion.jda.api.entities.TextChannel;
-import net.dv8tion.jda.api.entities.User;
+import net.dv8tion.jda.api.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -67,7 +64,7 @@ public class FAQResponseServiceBean {
     @Autowired
     private FAQResponseServiceBean self;
 
-    public CompletableFuture<FAQResponseModel> loadFAQResponse(String commandName, TextChannel textChannel) {
+    public CompletableFuture<FAQResponseModel> loadFAQResponse(String commandName, GuildMessageChannel textChannel) {
         AServer server = serverManagementService.loadServer(textChannel.getGuild().getIdLong());
         Optional<FAQCommand> faqCommandOptional = faqCommandManagementServiceBean.findByNameAndServer(commandName, server);
         if(!faqCommandOptional.isPresent()) {
