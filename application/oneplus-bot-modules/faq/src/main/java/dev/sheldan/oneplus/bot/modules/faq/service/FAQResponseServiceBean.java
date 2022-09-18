@@ -23,6 +23,7 @@ import dev.sheldan.oneplus.bot.modules.faq.service.management.FAQCommandAliasMan
 import dev.sheldan.oneplus.bot.modules.faq.service.management.FAQCommandManagementServiceBean;
 import lombok.extern.slf4j.Slf4j;
 import net.dv8tion.jda.api.entities.*;
+import net.dv8tion.jda.api.entities.channel.middleman.GuildMessageChannel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

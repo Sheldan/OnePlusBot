@@ -19,7 +19,7 @@ import dev.sheldan.oneplus.bot.custom.moderation.config.ModerationCustomFeatureD
 import dev.sheldan.oneplus.bot.custom.moderation.config.ModerationCustomPostTarget;
 import dev.sheldan.oneplus.bot.custom.moderation.model.template.WarningThresholdNotificationModel;
 import lombok.extern.slf4j.Slf4j;
-import net.dv8tion.jda.api.entities.GuildMessageChannel;
+import net.dv8tion.jda.api.entities.channel.middleman.GuildMessageChannel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
