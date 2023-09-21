@@ -1,0 +1,34 @@
+{
+  "liquibase_artifacts": [
+    { "zip": "scheduling", "file": "scheduling-changeLog.xml" },
+    { "zip": "core", "file": "core-changeLog.xml" },
+    { "zip": "utility", "file": "utility-changeLog.xml"},
+    { "zip": "entertainment", "file": "entertainment-changeLog.xml"},
+    { "zip": "link-embed", "file": "link-embed-changeLog.xml"},
+    { "zip": "webservices", "file": "webservices-changeLog.xml"},
+    { "zip": "starboard", "file": "starboard-changeLog.xml"},
+    { "zip": "remind", "file": "remind-changeLog.xml"},
+    { "zip": "logging", "file": "logging-changeLog.xml"},
+    { "zip": "suggestion", "file": "suggestion-changeLog.xml"},
+    { "zip": "invite-filter", "file": "inviteFilter-changeLog.xml"},
+    { "zip": "profanity-filter", "file": "profanityFilter-changeLog.xml"},
+    { "zip": "statistic", "file": "statistic-changeLog.xml"},
+    { "zip": "experience-tracking", "file": "experience-changeLog.xml"},
+    { "zip": "moderation", "file": "moderation-changeLog.xml"},
+    { "zip": "modmail", "file": "modMail-changeLog.xml"},
+    { "zip": "assignable-roles", "file": "assignableRoles-changeLog.xml"},
+    { "zip": "voice-channel-context", "file": "voiceChannelContext-changeLog.xml"},
+    { "zip": "anti-raid", "file": "antiRaid-changeLog.xml"},
+    { "zip": "dynamic-activity", "file": "dynamicActivity-changeLog.xml"},
+    { "zip": "setup", "file": "setup-changeLog.xml"},
+    { "zip": "referral", "file": "referral-changeLog.xml"},
+    { "zip": "starboard-custom", "file": "starboard-custom-changeLog.xml"},
+    { "zip": "moderation-custom", "file": "moderation-custom-changeLog.xml"},
+    { "zip": "dynamic-activity-custom", "file": "dynamicActivity-custom-changeLog.xml"},
+    { "zip": "news", "file": "news-changeLog.xml"},
+    { "zip": "faq", "file": "faq-changeLog.xml"},
+    { "zip": "seasonal", "file": "seasonal-changeLog.xml"}
+  ]
+}
+
+

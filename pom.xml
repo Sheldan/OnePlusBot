@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.1.RELEASE</version>
+        <version>3.1.1</version>
         <relativePath />
     </parent>
 
@@ -15,12 +15,12 @@
     <version>1.6.6-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
         <!-- edit in release.yml as well -->
         <!-- when releasing a new opbot version, update the .env as well-->
-        <abstracto.version>1.4.20</abstracto.version>
-        <abstracto.templates.version>1.4.13</abstracto.templates.version>
+        <abstracto.version>1.5.9</abstracto.version>
+        <abstracto.templates.version>1.4.21</abstracto.templates.version>
     </properties>
 
     <modules>

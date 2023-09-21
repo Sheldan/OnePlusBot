@@ -12,7 +12,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>docker-compose</module>
         <module>image-packaging</module>
     </modules>
 

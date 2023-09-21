@@ -6,12 +6,12 @@ import dev.sheldan.abstracto.core.service.management.UserInServerManagementServi
 import dev.sheldan.oneplus.bot.modules.news.exception.NewsPostNotFoundException;
 import dev.sheldan.oneplus.bot.modules.news.model.database.NewsPost;
 import dev.sheldan.oneplus.bot.modules.news.repository.NewsPostRepository;
+import jakarta.persistence.*;
 import lombok.extern.slf4j.Slf4j;
 import net.dv8tion.jda.api.entities.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.EntityManager;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;

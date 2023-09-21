@@ -3,7 +3,7 @@ package dev.sheldan.oneplus.bot.modules.faq.models.database;
 import dev.sheldan.oneplus.bot.modules.faq.models.database.embed.CommandResponseId;
 import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.Instant;
 
 @Builder
