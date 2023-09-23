@@ -4,7 +4,7 @@ services:
   bot:
     build:
       context: oneplusbot
-    image: ${REGISTRY_PREFIX}oneplus-bot:${VERSION:-latest}
+    image: ${REGISTRY_PREFIX}oneplus-bot-image:${VERSION:-latest}
   db-data:
     build:
       context: db-data

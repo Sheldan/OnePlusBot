@@ -7,8 +7,8 @@ replicaCount: 1
 bot:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: IfNotPresent
-  image: oneplus-bot
-  tag: 1.6.7
+  image: oneplus-bot-image
+  tag: 1.6.8
   livenessProbe:
     initialDelaySeconds: 60
     periodSeconds: 5
@@ -29,7 +29,7 @@ templateDeploymentData:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-template-data
-  tag: 1.6.7
+  tag: 1.6.8
 
 dbConfigDeployment:
   enabled: true
@@ -42,7 +42,7 @@ dbConfigDeploymentData:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-db-data
-  tag: 1.6.7
+  tag: 1.6.8
 
 dbCredentials:
   host:
