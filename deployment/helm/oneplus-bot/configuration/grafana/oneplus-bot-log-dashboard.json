@@ -53,7 +53,7 @@
               "uid": "loki"
             },
             "editorMode": "builder",
-            "expr": "{app=\"OnePlusBot\", namespace=\"oneplus-bot\"} |= `$logFilter`",
+            "expr": "{app=\"oneplus-bot\", namespace=\"oneplus-bot\"} |= `$logFilter`",
             "maxLines": 5000,
             "queryType": "range",
             "refId": "A"
@@ -92,7 +92,7 @@
               "uid": "loki"
             },
             "editorMode": "code",
-            "expr": "{app=\"OnePlusBot\", namespace=\"oneplus-bot\"} |= \"ERROR\"",
+            "expr": "{app=\"oneplus-bot\", namespace=\"oneplus-bot\"} |= \"ERROR\"",
             "maxLines": 5000,
             "queryType": "range",
             "refId": "A"
@@ -186,7 +186,7 @@
               "uid": "loki"
             },
             "editorMode": "code",
-            "expr": "rate({app=\"OnePlusBot\", namespace=\"oneplus-bot\"}[$__interval])",
+            "expr": "rate({app=\"oneplus-bot\", namespace=\"oneplus-bot\"}[$__interval])",
             "queryType": "range",
             "refId": "A"
           }
