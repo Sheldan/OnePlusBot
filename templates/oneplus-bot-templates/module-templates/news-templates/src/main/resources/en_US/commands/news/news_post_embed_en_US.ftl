@@ -1,6 +1,6 @@
 {
   <#assign roleMention="<@&479202891358535681>"/>
-  <#assign authorMention>${author.user.name}#${author.user.discriminator}</#assign>
+  <#assign authorMention>${author.user.name}</#assign>
     "additionalMessage": "<@safe_include "news_post_description"/>",
     "embeds": [
         {
