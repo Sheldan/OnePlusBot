@@ -11,6 +11,8 @@ import java.util.List;
 @Component
 public class NewsFeature implements FeatureConfig {
 
+    public static final String NEWS_FORUM_POST_NOTIFICATION_SERVER_ID_ENV_NAME = "NEWS_FORUM_POST_NOTIFICATION_SERVER_ID";
+
     @Override
     public FeatureDefinition getFeature() {
         return NewsFeatureDefinition.NEWS;
@@ -18,6 +20,6 @@ public class NewsFeature implements FeatureConfig {
 
     @Override
     public List<PostTargetEnum> getRequiredPostTargets() {
-        return Arrays.asList(NewsPostTarget.NEWS_TARGET);
+        return Arrays.asList(NewsPostTarget.NEWS_TARGET, NewsPostTarget.FORUM_POST_NOTIFICATION);
     }
 }

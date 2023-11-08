@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 public enum NewsPostTarget implements PostTargetEnum {
-    NEWS_TARGET("news");
+    NEWS_TARGET("news"), FORUM_POST_NOTIFICATION("forumPostNotification");
 
     private String key;
 

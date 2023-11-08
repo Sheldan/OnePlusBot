@@ -1,0 +1,1 @@
+The channel in which the notifications for new forum posts should be posted to. Currently: ${currentTarget}

@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog dbchangelog.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext dbchangelog.xsd
+    http://www.liquibase.org/xml/ns/pro dbchangelog.xsd" >
+
+    <changeSet author="Sheldan" id="news_forum_post-table">
+        <createTable tableName="news_forum_post">
+            <column name="id" type="BIGINT">
+                <constraints nullable="true" primaryKey="true" primaryKeyName="pk_news_forum_post"/>
+            </column>
+            <column name="creator_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created" type="TIMESTAMP WITHOUT TIME ZONE">
+                <constraints nullable="true"/>
+            </column>
+            <column name="updated" type="TIMESTAMP WITHOUT TIME ZONE"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="creator_id" baseTableName="news_forum_post" constraintName="fk_news_forum_post_creator"
+                                 deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="user_id" referencedTableName="news_source" validate="true"/>
+
+        <sql>
+            DROP TRIGGER IF EXISTS news_forum_post_update_trigger ON news_forum_post;
+            CREATE TRIGGER repost_check_channel_group_update_trigger BEFORE UPDATE ON news_forum_post FOR EACH ROW EXECUTE PROCEDURE update_trigger_procedure();
+        </sql>
+        <sql>
+            DROP TRIGGER IF EXISTS news_forum_post_insert_trigger ON news_forum_post;
+            CREATE TRIGGER repost_check_channel_group_insert_trigger BEFORE INSERT ON news_forum_post FOR EACH ROW EXECUTE PROCEDURE insert_trigger_procedure();
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

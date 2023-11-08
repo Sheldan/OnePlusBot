@@ -15,7 +15,7 @@ local_resource(
   deps=['pom.xml'])
 
 docker_build_with_restart(
-  registry + 'oneplus-bot',
+  registry + 'oneplus-bot-image',
   './application/executable/target/jar',
   entrypoint=['java', '-noverify', '-cp', '.:./lib/*', 'dev.sheldan.oneplus.bot.executable.Application'],
   dockerfile='./application/executable/Dockerfile',

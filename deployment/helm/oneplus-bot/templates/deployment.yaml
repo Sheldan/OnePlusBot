@@ -57,6 +57,8 @@ spec:
                 secretKeyRef:
                   name: db-credentials
                   key: dbName
+            - name: NEWS_FORUM_POST_NOTIFICATION_SERVER_ID
+              value: "{{ .Values.bot.config.newsForumPostNotificationServerId }}"
             - name: TOKEN
               valueFrom:
                 secretKeyRef:
