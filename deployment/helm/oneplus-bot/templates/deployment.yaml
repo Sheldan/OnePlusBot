@@ -71,6 +71,10 @@ spec:
                 secretKeyRef:
                   name: api-keys
                   key: youtubeApiKey
+            {{- range $key, $value := .Values.bot.propertyConfig }}
+            - name: {{ $key | quote }}
+              value: {{ $value | quote}}
+            {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

@@ -19,6 +19,8 @@ bot:
     failureThreshold: 3
   config:
     newsForumPostNotificationServerId:
+  propertyConfig:
+    hikariPoolSize: 10
 
 templateDeployment:
   enabled: true
