@@ -1,14 +1,14 @@
 {
   "template_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "remind", "logging",
     "suggestion", "invite-filter", "profanity-filter", "statistic", "experience-tracking", "moderation", "modmail", "assignable-roles",
-    "voice-channel-context", "anti-raid",
+    "voice-channel-context", "anti-raid", "giveaway", "image-generation",
     "starboard-custom",
     "overrides-templates-webservices", "overrides-templates-core", "overrides-templates-logging", "overrides-templates-statistic",
     "overrides-templates-modmail", "overrides-templates-moderation",
     "news", "referral", "faq"],
   "translation_artifacts": ["utility", "core", "entertainment", "starboard", "link-embed", "webservices", "suggestion",
     "remind", "logging", "invite-filter", "profanity-filter", "statistic", "experience-tracking", "moderation", "modmail", "assignable-roles",
-    "voice-channel-context", "anti-raid",
+    "voice-channel-context", "anti-raid", "giveaway", "image-generation",
     "starboard-custom", "dynamic-activity-custom-translations", "moderation-custom",
     "overrides-translation-moderation",
     "news", "setup", "referral", "faq", "seasonal"]

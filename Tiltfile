@@ -2,6 +2,7 @@ allow_k8s_contexts('k8s-cluster')
 
 load('ext://restart_process', 'docker_build_with_restart')
 registry = 'harbor.sheldan.dev/oneplus-bot/'
+abstracto_registry = 'harbor.sheldan.dev/abstracto/'
 
 local_resource(
   'oneplus-bot-java-compile',
@@ -29,6 +30,7 @@ docker_build_with_restart(
 
 docker_build(registry + 'oneplus-bot-db-data', 'deployment/image-packaging/src/main/docker/db-data/')
 docker_build(registry + 'oneplus-bot-template-data', 'deployment/image-packaging/src/main/docker/template-data/')
+docker_build(registry + 'oneplus-bot-private-rest-api', 'deployment/image-packaging/src/main/docker/private-rest-api/', build_args={'REGISTRY_PREFIX': abstracto_registry})
 
 
 k8s_yaml(helm('deployment/helm/oneplus-bot', values=

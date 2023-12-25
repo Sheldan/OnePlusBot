@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  bot:
+    build:
+      context: deployment/image-packaging/src/main/docker/oneplusbot
+    image: ${REGISTRY_PREFIX}oneplus-bot-image:${VERSION:-latest}
+  db-data:
+    build:
+      context: deployment/image-packaging/src/main/docker/db-data
+    image: ${REGISTRY_PREFIX}oneplus-bot-db-data:${VERSION:-latest}
+  private-rest-api-packaging:
+    build:
+      context: deployment/image-packaging/src/main/docker/private-rest-api
+      args:
+        REGISTRY_PREFIX: ${ABSTRACTO_PREFIX}
+        ABSTRACTO_VERSION: ${ABSTRACTO_VERSION}
+    image: ${REGISTRY_PREFIX}oneplus-bot-private-rest-api:${VERSION:-latest}
+  template-data:
+    build:
+      context: deployment/image-packaging/src/main/docker/template-data
+    image: ${REGISTRY_PREFIX}oneplus-bot-template-data:${VERSION:-latest}

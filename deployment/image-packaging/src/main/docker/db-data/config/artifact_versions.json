@@ -9,6 +9,8 @@
     { "zip": "starboard", "file": "starboard-changeLog.xml"},
     { "zip": "remind", "file": "remind-changeLog.xml"},
     { "zip": "logging", "file": "logging-changeLog.xml"},
+    { "zip": "giveaway", "file": "giveaway-changeLog.xml"},
+    { "zip": "image-generation", "file": "imageGeneration-changeLog.xml"},
     { "zip": "suggestion", "file": "suggestion-changeLog.xml"},
     { "zip": "invite-filter", "file": "inviteFilter-changeLog.xml"},
     { "zip": "profanity-filter", "file": "profanityFilter-changeLog.xml"},
