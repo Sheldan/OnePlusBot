@@ -17,8 +17,8 @@
     <properties>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.source>17</maven.compiler.source>
-        <abstracto.version>1.5.21</abstracto.version>
-        <abstracto.templates.version>1.4.29</abstracto.templates.version>
+        <abstracto.version>1.5.23</abstracto.version>
+        <abstracto.templates.version>1.4.31</abstracto.templates.version>
     </properties>
 
     <modules>
@@ -34,8 +34,15 @@
             <url>https://jcenter.bintray.com</url>
         </repository>
         <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/Sheldan/*</url>
+            <id>github-abstracto</id>
+            <url>https://maven.pkg.github.com/Sheldan/abstracto*</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>github-oneplusbot</id>
+            <url>https://maven.pkg.github.com/Sheldan/OnePlusBot*</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -45,16 +52,16 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
+            <id>github-oneplusbot</id>
             <name>GitHub Packages</name>
             <url>https://maven.pkg.github.com/Sheldan/OnePlusBot</url>
         </repository>
     </distributionManagement>
 
     <scm>
-        <url>https://maven.pkg.github.com/Sheldan/OnePlusBot</url>
-        <developerConnection>scm:git:git@github.com:Sheldan/OnePlusBot.git</developerConnection>
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:${project.scm.url}</developerConnection>
+        <url>https://github.com/Sheldan/OnePlusBot.git</url>
         <tag>HEAD</tag>
     </scm>
-
 </project>
