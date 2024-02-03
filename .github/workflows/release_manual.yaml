@@ -53,7 +53,8 @@ jobs:
             {
               "bot.tag": "${{ env.version }}",
               "templateDeploymentData.tag": "${{ env.version }}",
-              "dbConfigDeploymentData.tag": "${{ env.version }}"
+              "dbConfigDeploymentData.tag": "${{ env.version }}",
+              "privateRestApi.tag": "${{ env.version }}"
             }
       - name: Update .env version
         run:
