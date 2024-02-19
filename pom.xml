@@ -17,8 +17,8 @@
     <properties>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.source>17</maven.compiler.source>
-        <abstracto.version>1.5.24</abstracto.version>
-        <abstracto.templates.version>1.4.32</abstracto.templates.version>
+        <abstracto.version>1.5.25</abstracto.version>
+        <abstracto.templates.version>1.4.33</abstracto.templates.version>
     </properties>
 
     <modules>
@@ -43,6 +43,13 @@
         <repository>
             <id>github-oneplusbot</id>
             <url>https://maven.pkg.github.com/Sheldan/OnePlusBot*</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/Sheldan/*</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
