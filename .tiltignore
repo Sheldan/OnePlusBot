@@ -1,0 +1,3 @@
+*.tgz
+tilt/oneplusbot-dev/tmpcharts/
+tilt/oneplusbot-dev/charts/*.tgz

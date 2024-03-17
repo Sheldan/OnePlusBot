@@ -18,7 +18,7 @@ local_resource(
 docker_build_with_restart(
   registry + 'oneplus-bot-image',
   './application/executable/target/jar',
-  entrypoint=['java', '-noverify', '-cp', '.:./lib/*', 'dev.sheldan.oneplus.bot.executable.Application'],
+  entrypoint=['java', '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005', '-cp', '.:./lib/*', 'dev.sheldan.oneplus.bot.executable.Application'],
   dockerfile='./application/executable/Dockerfile',
   live_update=[
     sync('./application/executable/target/jar/BOOT-INF/lib', '/app/lib'),
@@ -33,7 +33,8 @@ docker_build(registry + 'oneplus-bot-template-data', 'deployment/image-packaging
 docker_build(registry + 'oneplus-bot-private-rest-api', 'deployment/image-packaging/src/main/docker/private-rest-api/', build_args={'REGISTRY_PREFIX': abstracto_registry})
 
 
-k8s_yaml(helm('deployment/helm/oneplus-bot', values=
+local('cd tilt/oneplusbot-dev && helm dep up')
+k8s_yaml(helm('tilt/oneplusbot-dev', values=
 ['./../OnePlusBot-environments/argocd/apps/oneplus-bot/values/local/values.yaml',
 'secrets://./../OnePlusBot-environments/argocd/apps/oneplus-bot/values/local/values.secrets.yaml']
 ))
