@@ -11,11 +11,3 @@ Custom features which were ported
  - [x] Setup channel handling
  - [x] Referral link handling 
 
-# Technologies used in addition to the ones provided in abstracto
-- [grafana](https://github.com/grafana/grafana) for visualization of the bot status and metrics
-- [Loki](https://github.com/grafana/loki) to visualize and query log files
-- [pgAdmin](https://github.com/postgres/pgadmin4) to view the database
-- [prometheus](https://github.com/prometheus/prometheus) for metric collection
-- [postgres](https://github.com/postgres/postgres) as a database
-- [loki](https://github.com/grafana/loki) for log aggregation
-  
