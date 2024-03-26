@@ -16,6 +16,13 @@ services:
         REGISTRY_PREFIX: ${ABSTRACTO_PREFIX}
         ABSTRACTO_VERSION: ${ABSTRACTO_VERSION}
     image: ${REGISTRY_PREFIX}oneplus-bot-private-rest-api:${VERSION:-latest}
+  rest-api-packaging:
+    build:
+      context: deployment/image-packaging/src/main/docker/rest-api
+      args:
+        REGISTRY_PREFIX: ${ABSTRACTO_PREFIX}
+        ABSTRACTO_VERSION: ${ABSTRACTO_VERSION}
+    image: ${REGISTRY_PREFIX}oneplus-bot-rest-api:${VERSION:-latest}
   template-data:
     build:
       context: deployment/image-packaging/src/main/docker/template-data

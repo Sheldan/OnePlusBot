@@ -31,6 +31,7 @@ docker_build_with_restart(
 docker_build(registry + 'oneplus-bot-db-data', 'deployment/image-packaging/src/main/docker/db-data/')
 docker_build(registry + 'oneplus-bot-template-data', 'deployment/image-packaging/src/main/docker/template-data/')
 docker_build(registry + 'oneplus-bot-private-rest-api', 'deployment/image-packaging/src/main/docker/private-rest-api/', build_args={'REGISTRY_PREFIX': abstracto_registry})
+docker_build(registry + 'oneplus-bot-rest-api', 'deployment/image-packaging/src/main/docker/rest-api/', build_args={'REGISTRY_PREFIX': abstracto_registry})
 
 
 local('cd tilt/oneplusbot-dev && helm dep up')
