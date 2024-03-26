@@ -61,6 +61,7 @@ jobs:
               "templateDeploymentData.tag": "${{ env.version }}",
               "dbConfigDeploymentData.tag": "${{ env.version }}",
               "privateRestApi.tag": "${{ env.version }}"
+              "restApi.tag": "${{ env.version }}"
             }
       - name: Update .env version
         run:

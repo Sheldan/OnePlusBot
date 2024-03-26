@@ -81,7 +81,7 @@ restApi:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-rest-api
-  tag: 1.6.22
+  tag: 1.6.24
   podAnnotations: {}
   podSecurityContext: {}
   securityContext: {}
