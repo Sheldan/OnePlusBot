@@ -16,6 +16,7 @@ bot:
     newsForumPostNotificationServerId: null
   propertyConfig:
     hikariPoolSize: 10
+  host:
 templateDeployment:
   enabled: true
   repository: harbor.sheldan.dev/abstracto
