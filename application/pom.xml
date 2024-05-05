@@ -5,13 +5,13 @@
     <parent>
         <groupId>dev.sheldan.oneplus.bot</groupId>
         <artifactId>oneplusbot</artifactId>
-        <version>1.6.28</version>
+        <version>1.6.29-SNAPSHOT</version>
     </parent>
 
     <groupId>dev.sheldan.oneplus.bot.application</groupId>
     <artifactId>application</artifactId>
     <packaging>pom</packaging>
-    <version>1.6.28</version>
+    <version>1.6.29-SNAPSHOT</version>
     <modules>
         <module>executable</module>
         <module>oneplus-bot-customizations</module>
