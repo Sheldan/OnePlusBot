@@ -17,8 +17,8 @@
     <properties>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.source>17</maven.compiler.source>
-        <abstracto.version>1.5.38</abstracto.version>
-        <abstracto.templates.version>1.4.38</abstracto.templates.version>
+        <abstracto.version>1.5.48</abstracto.version>
+        <abstracto.templates.version>1.4.45</abstracto.templates.version>
     </properties>
 
     <modules>
