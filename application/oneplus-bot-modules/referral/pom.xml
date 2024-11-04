@@ -3,7 +3,7 @@
     <parent>
         <groupId>dev.sheldan.oneplus.bot.application.modules</groupId>
         <artifactId>oneplus-bot-modules</artifactId>
-        <version>1.6.32-SNAPSHOT</version>
+        <version>1.6.32</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
