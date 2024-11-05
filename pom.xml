@@ -12,7 +12,7 @@
 
     <groupId>dev.sheldan.oneplus.bot</groupId>
     <artifactId>oneplusbot</artifactId>
-    <version>1.6.33-SNAPSHOT</version>
+    <version>1.6.33</version>
 
     <properties>
         <maven.compiler.target>17</maven.compiler.target>
@@ -69,6 +69,6 @@
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
         <url>https://github.com/Sheldan/OnePlusBot.git</url>
-        <tag>HEAD</tag>
+        <tag>oneplusbot-1.6.33</tag>
     </scm>
 </project>
