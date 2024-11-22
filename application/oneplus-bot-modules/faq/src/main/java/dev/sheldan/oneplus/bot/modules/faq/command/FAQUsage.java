@@ -52,7 +52,7 @@ public class FAQUsage extends AbstractConditionableCommand {
             model = faqUsageServiceBean.getFAQUsageModel(server, commandName);
         }
 
-        return FutureUtils.toSingleFutureGeneric(channelService.sendEmbedTemplateInTextChannelList(FAQ_USAGE_RESPONSE_TEMPLATE_KEY, model, commandContext.getChannel()))
+        return FutureUtils.toSingleFutureGeneric(channelService.sendEmbedTemplateInMessageChannel(FAQ_USAGE_RESPONSE_TEMPLATE_KEY, model, commandContext.getChannel()))
                 .thenApply(unused -> CommandResult.fromSuccess());
     }
 

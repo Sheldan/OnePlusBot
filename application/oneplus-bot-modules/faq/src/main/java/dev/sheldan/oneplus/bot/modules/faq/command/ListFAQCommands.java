@@ -39,7 +39,7 @@ public class ListFAQCommands extends AbstractConditionableCommand {
     public CompletableFuture<CommandResult> executeAsync(CommandContext commandContext) {
         AServer server = serverManagementService.loadServer(commandContext.getGuild());
         ListFAQCommandsModel model = faqServiceBean.getCommandListingForServer(server);
-        return FutureUtils.toSingleFutureGeneric(channelService.sendEmbedTemplateInTextChannelList(LIST_FAQ_COMMANDS_RESPONSE_TEMPLATE_KEY, model, commandContext.getChannel()))
+        return FutureUtils.toSingleFutureGeneric(channelService.sendEmbedTemplateInMessageChannel(LIST_FAQ_COMMANDS_RESPONSE_TEMPLATE_KEY, model, commandContext.getChannel()))
                 .thenApply(unused -> CommandResult.fromSuccess());
     }
 

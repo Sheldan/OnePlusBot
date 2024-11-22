@@ -66,14 +66,14 @@ public class FAQ extends AbstractConditionableCommand {
                                     .forEach(faqResponseMessageModel ->
                                             messageFutures.add(FutureUtils.
                                                     toSingleFutureGeneric(channelService.
-                                                            sendEmbedTemplateInTextChannelList(FAQ_RESPONSE_TEMPLATE_KEY,
+                                                            sendEmbedTemplateInMessageChannel(FAQ_RESPONSE_TEMPLATE_KEY,
                                                                     faqResponseMessageModel, commandContext.getChannel()))));
                             return FutureUtils.toSingleFutureGeneric(messageFutures);
                         } else {
                             return FutureUtils
                                     .toSingleFutureGeneric(
                                             channelService.
-                                                    sendEmbedTemplateInTextChannelList(FAQ_RESPONSE_NO_COMMAND_FOUND_TEMPLATE_KEY,
+                                                    sendEmbedTemplateInMessageChannel(FAQ_RESPONSE_NO_COMMAND_FOUND_TEMPLATE_KEY,
                                                             faqResponseModel, commandContext.getChannel()));
                         }
                     })
@@ -85,7 +85,7 @@ public class FAQ extends AbstractConditionableCommand {
             return FutureUtils
                     .toSingleFutureGeneric(
                             channelService.
-                                    sendEmbedTemplateInTextChannelList(FAQ_RESPONSE_NO_COMMAND_FOUND_TEMPLATE_KEY,
+                                    sendEmbedTemplateInMessageChannel(FAQ_RESPONSE_NO_COMMAND_FOUND_TEMPLATE_KEY,
                                             model, commandContext.getChannel()))
                     .thenApply(unused -> CommandResult.fromSuccess());
         }

@@ -119,7 +119,7 @@ public class ReferralListener implements AsyncMessageReceivedListener {
                         .build();
                 ServerUser serverUser = ServerUser.fromMember(message.getMember());
                 CompletableFutureList<Message> sendFutures = new CompletableFutureList<>(channelService
-                        .sendEmbedTemplateInMessageChannelList(REFERRAL_POST_EMBED_TEMPLATE_KEY, postModel, message.getChannel()));
+                        .sendEmbedTemplateInMessageChannel(REFERRAL_POST_EMBED_TEMPLATE_KEY, postModel, message.getChannel()));
                 CompletableFuture<Void> deletionFuture = messageService.deleteMessage(message);
                 CompletableFuture.allOf(sendFutures.getMainFuture(), deletionFuture)
                         .thenAccept(unused -> self.updateReferralStateInDatabase(serverUser))
@@ -139,7 +139,7 @@ public class ReferralListener implements AsyncMessageReceivedListener {
 
     private void deleteAndNotify(Message message, String usedTemplate, Object usedModel) {
         CompletableFutureList<Message> futures = new CompletableFutureList<>(channelService
-                .sendEmbedTemplateInMessageChannelList(usedTemplate, usedModel, message.getChannel()));
+                .sendEmbedTemplateInMessageChannel(usedTemplate, usedModel, message.getChannel()));
         futures.getMainFuture().thenAccept(unused ->
                 scheduledExecutorService.schedule(() ->
                                 futures.getObjects().forEach(createdMessage -> messageService.deleteMessage(createdMessage)),
