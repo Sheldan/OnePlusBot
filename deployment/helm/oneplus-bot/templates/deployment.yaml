@@ -75,6 +75,11 @@ spec:
                   key: youtubeApiKey
             - name: PRIVATE_REST_API_HOST
               value: "{{ .Values.privateRestApi.service.name }}.{{ .Release.Namespace }}.svc.cluster.local"
+            - name: FREE_CURRENCY_API_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: api-keys
+                  key: freeCurrencyApiApiKey
             - name: PRIVATE_REST_API_PORT
               value: "{{ .Values.privateRestApi.service.targetPort }}"
             - name: FRONTEND_BASE

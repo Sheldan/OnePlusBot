@@ -5,3 +5,4 @@ metadata:
 data:
   discordToken: {{ $.Values.apiKeys.discord.token | b64enc }} # b64enc is needed, because a stringData secret field cannot hold numeric values
   youtubeApiKey: {{ $.Values.apiKeys.youtube.apiKey | b64enc }}
+  freeCurrencyApiApiKey: {{ $.Values.apiKeys.freeCurrencyApi.apiKey | b64enc }}
