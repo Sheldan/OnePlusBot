@@ -3,7 +3,7 @@ bot:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: IfNotPresent
   image: oneplus-bot-image
-  tag: 1.6.36
+  tag: 1.7.0
   livenessProbe:
     initialDelaySeconds: 60
     periodSeconds: 5
@@ -27,7 +27,7 @@ templateDeploymentData:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-template-data
-  tag: 1.6.36
+  tag: 1.7.0
 dbConfigDeployment:
   enabled: true
   repository: harbor.sheldan.dev/abstracto
@@ -38,7 +38,7 @@ dbConfigDeploymentData:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-db-data
-  tag: 1.6.36
+  tag: 1.7.0
 dbCredentials:
   host: null
   port: null
@@ -51,7 +51,7 @@ privateRestApi:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-private-rest-api
-  tag: 1.6.36
+  tag: 1.7.0
   podAnnotations: {}
   podSecurityContext: {}
   securityContext: {}
@@ -82,7 +82,7 @@ restApi:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-rest-api
-  tag: 1.6.36
+  tag: 1.7.0
   podAnnotations: {}
   podSecurityContext: {}
   securityContext: {}
