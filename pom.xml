@@ -12,13 +12,13 @@
 
     <groupId>dev.sheldan.oneplus.bot</groupId>
     <artifactId>oneplusbot</artifactId>
-    <version>1.6.37-SNAPSHOT</version>
+    <version>1.7.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.source>17</maven.compiler.source>
-        <abstracto.version>1.5.59</abstracto.version>
-        <abstracto.templates.version>1.4.50</abstracto.templates.version>
+        <abstracto.version>1.6.4</abstracto.version>
+        <abstracto.templates.version>1.4.55</abstracto.templates.version>
     </properties>
 
     <modules>

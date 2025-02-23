@@ -8,10 +8,7 @@ import dev.sheldan.abstracto.core.command.execution.CommandContext;
 import dev.sheldan.abstracto.core.command.execution.CommandResult;
 import dev.sheldan.abstracto.core.config.FeatureDefinition;
 import dev.sheldan.abstracto.core.models.database.AServer;
-import dev.sheldan.abstracto.core.service.ChannelService;
-import dev.sheldan.abstracto.core.service.JSONValidationService;
 import dev.sheldan.abstracto.core.service.management.ServerManagementService;
-import dev.sheldan.abstracto.core.utils.FileService;
 import dev.sheldan.oneplus.bot.modules.faq.config.FAQFeatureDefinition;
 import dev.sheldan.oneplus.bot.modules.faq.config.FAQModuleDefinition;
 import dev.sheldan.oneplus.bot.modules.faq.service.FAQServiceBean;
@@ -28,16 +25,7 @@ import java.util.concurrent.CompletableFuture;
 public class DeleteFAQ extends AbstractConditionableCommand {
 
     @Autowired
-    private FileService fileService;
-
-    @Autowired
     private FAQServiceBean faqServiceBean;
-
-    @Autowired
-    private ChannelService channelService;
-
-    @Autowired
-    private JSONValidationService jsonValidationService;
 
     @Autowired
     private ServerManagementService serverManagementService;
