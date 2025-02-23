@@ -141,7 +141,7 @@ All of this information cannot be linked to any user (or any server for that mat
 ## How can I decide which information is collected?
 It is not possible to opt-out of singular sub-services of the bot. Should you decide that your information should not be collected, please cease usage of the bot immediately (leave any guild the bot operates in).
 
-_Should you decide to no longer utilize the bot, you may request your data to be erased within 30 days as per GDPR if you are a citizen of the EU. You can do this by sending an email to this bot with the text: GDPR Data removal <Username> <UserId>. If your request is incomplete, we cannot acknowledge it and therefore your data will not be removed. In order to identify authentic requests, please contact modmail beforehand by sending a direct message to the bot and stating your intention._
+_Should you decide to no longer utilize the bot, you may request your data to be erased within 30 days as per GDPR if you are a citizen of the EU. You can do this by sending a message to the user "sheldan" on Discord: GDPR Data removal <Username> <UserId>. If your request is incomplete, we cannot acknowledge it and therefore your data will not be removed. In order to identify authentic requests, please contact modmail beforehand by sending a direct message to the bot and stating your intention._
 
 
 ## Legal information
