@@ -3,7 +3,7 @@ bot:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: IfNotPresent
   image: oneplus-bot-image
-  tag: 1.7.0
+  tag: 1.7.1
   livenessProbe:
     initialDelaySeconds: 60
     periodSeconds: 5
@@ -22,23 +22,23 @@ templateDeployment:
   repository: harbor.sheldan.dev/abstracto
   pullPolicy: Always
   image: abstracto-template-deployment
-  tag: 1.6.4
+  tag: 1.6.8
 templateDeploymentData:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-template-data
-  tag: 1.7.0
+  tag: 1.7.1
 dbConfigDeployment:
   enabled: true
   repository: harbor.sheldan.dev/abstracto
   pullPolicy: Always
   image: abstracto-db-deployment
-  tag: 1.6.4
+  tag: 1.6.8
 dbConfigDeploymentData:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-db-data
-  tag: 1.7.0
+  tag: 1.7.1
 dbCredentials:
   host: null
   port: null
@@ -51,7 +51,7 @@ privateRestApi:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-private-rest-api
-  tag: 1.7.0
+  tag: 1.7.1
   podAnnotations: {}
   podSecurityContext: {}
   securityContext: {}
@@ -82,7 +82,7 @@ restApi:
   repository: harbor.sheldan.dev/oneplus-bot
   pullPolicy: Always
   image: oneplus-bot-rest-api
-  tag: 1.7.0
+  tag: 1.7.1
   podAnnotations: {}
   podSecurityContext: {}
   securityContext: {}
