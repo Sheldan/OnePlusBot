@@ -1,10 +1,15 @@
 package dev.sheldan.oneplus.bot.modules.news.service;
 
+import dev.sheldan.abstracto.core.service.FeatureModeService;
 import dev.sheldan.abstracto.core.service.PostTargetService;
 import dev.sheldan.abstracto.core.templating.model.MessageToSend;
 import dev.sheldan.abstracto.core.templating.service.TemplateService;
 import dev.sheldan.abstracto.core.utils.FutureUtils;
+import dev.sheldan.oneplus.bot.modules.news.config.NewsFeatureDefinition;
+import dev.sheldan.oneplus.bot.modules.news.config.NewsFeatureMode;
 import dev.sheldan.oneplus.bot.modules.news.config.NewsPostTarget;
+import dev.sheldan.oneplus.bot.modules.news.model.ForumPostEntry;
+import dev.sheldan.oneplus.bot.modules.news.model.ForumPostModel;
 import dev.sheldan.oneplus.bot.modules.news.model.ForumPostNotificationEntry;
 import dev.sheldan.oneplus.bot.modules.news.model.ForumPostNotificationModel;
 import dev.sheldan.oneplus.bot.modules.news.model.database.NewsForumPost;
@@ -13,11 +18,14 @@ import dev.sheldan.oneplus.bot.modules.news.model.forum.ForumPost;
 import dev.sheldan.oneplus.bot.modules.news.service.management.NewsForumPostManagementServiceBean;
 import dev.sheldan.oneplus.bot.modules.news.service.management.NewsSourceManagementServiceBean;
 import lombok.extern.slf4j.Slf4j;
+import net.dv8tion.jda.api.entities.Message;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -45,7 +53,11 @@ public class NewsSourceServiceBean {
     @Autowired
     private NewsSourceServiceBean self;
 
+    @Autowired
+    private FeatureModeService featureModeService;
+
     private static final String NEWS_FORUM_POST_NOTIFICATION_TEMPLATE_KEY = "newsForumPost_notification";
+    private static final String NEWS_FORUM_POST_TEMPLATE_KEY = "newsForumPost";
 
     public void checkForNewThreads() {
         Long targetServerId = Long.parseLong(System.getenv(NEWS_FORUM_POST_NOTIFICATION_SERVER_ID_ENV_NAME));
@@ -54,34 +66,75 @@ public class NewsSourceServiceBean {
         if(newForumPosts.isEmpty()) {
             return;
         }
-        List<ForumPostNotificationEntry> entries = new ArrayList<>();
-        newForumPosts.forEach(forumPost -> entries.add(ForumPostNotificationEntry.fromPost(forumPost)));
 
-        ForumPostNotificationModel model = ForumPostNotificationModel
-                .builder()
-                .entries(entries)
-                .build();
+        if(featureModeService.featureModeActive(NewsFeatureDefinition.NEWS, targetServerId, NewsFeatureMode.AUTOMATIC_POST)) {
+            List<ForumPostEntry> entries = new ArrayList<>();
+            newForumPosts.forEach(forumPost -> entries.add(ForumPostEntry.fromPost(forumPost)));
+            ForumPostModel model = ForumPostModel
+                    .builder()
+                    .entries(entries)
+                    .build();
+            MessageToSend messageToSend = templateService.renderEmbedTemplate(NEWS_FORUM_POST_TEMPLATE_KEY, model, targetServerId);
+            List<CompletableFuture<Message>> messageFutures = postTargetService.sendEmbedInPostTarget(messageToSend, NewsPostTarget.NEWS_TARGET, targetServerId);
+            FutureUtils.toSingleFutureGeneric(messageFutures)
+                    .thenAccept(unused -> {
+                        log.info("Sent news forum post notification.");
+                        List<Pair<Long, Long>> posts = entries
+                                .stream()
+                                .map(forumPostNotificationEntry -> Pair.of(forumPostNotificationEntry.getCreatorId(), forumPostNotificationEntry.getPostId()))
+                                .toList();
+                        self.persistForumPostsAndThreadCount(posts);
+                        self.handleAutomaticPublish(messageFutures, targetServerId);
+                    });
+        } else {
+            List<ForumPostNotificationEntry> entries = new ArrayList<>();
+            newForumPosts.forEach(forumPost -> entries.add(ForumPostNotificationEntry.fromPost(forumPost)));
+            ForumPostNotificationModel model = ForumPostNotificationModel
+                    .builder()
+                    .entries(entries)
+                    .build();
+            MessageToSend messageToSend = templateService.renderEmbedTemplate(NEWS_FORUM_POST_NOTIFICATION_TEMPLATE_KEY, model, targetServerId);
+            FutureUtils.toSingleFutureGeneric(postTargetService.sendEmbedInPostTarget(messageToSend, NewsPostTarget.FORUM_POST_NOTIFICATION, targetServerId))
+                    .thenAccept(unused -> {
+                        log.info("Sent news forum post notification.");
+                        List<Pair<Long, Long>> posts = entries
+                                .stream()
+                                .map(forumPostNotificationEntry -> Pair.of(forumPostNotificationEntry.getCreatorId(), forumPostNotificationEntry.getPostId()))
+                                .toList();
+                        self.persistForumPostsAndThreadCount(posts);
+                    }).exceptionally(throwable -> {
+                        log.error("Failed to send news forum post notification.", throwable);
+                        return null;
+                    });
+        }
 
-        MessageToSend messageToSend = templateService.renderEmbedTemplate(NEWS_FORUM_POST_NOTIFICATION_TEMPLATE_KEY, model, targetServerId);
-
-        FutureUtils.toSingleFutureGeneric(postTargetService.sendEmbedInPostTarget(messageToSend, NewsPostTarget.FORUM_POST_NOTIFICATION, targetServerId))
-                .thenAccept(unused -> {
-                    log.info("Sent news forum post notification.");
-                    self.persistForumPostsAndThreadCount(entries);
-                }).exceptionally(throwable -> {
-                    log.error("Failed to send news forum post notification.", throwable);
-                    return null;
-                });
     }
 
     @Transactional
-    public void persistForumPostsAndThreadCount(List<ForumPostNotificationEntry> entries) {
+    public CompletableFuture<Message> handleAutomaticPublish(List<CompletableFuture<Message>> messageFutures, Long serverId) {
+        if(featureModeService.featureModeActive(NewsFeatureDefinition.NEWS, serverId, NewsFeatureMode.AUTOMATIC_PUBLISH)) {
+            if(messageFutures != null && !messageFutures.isEmpty() && messageFutures.get(0) != null) {
+                Message newsMessage = messageFutures.get(0).join();
+                log.info("Publishing message {} in server {}.", newsMessage.getId(), serverId);
+                return newsMessage.crosspost().submit();
+            } else {
+                log.info("No message found - not cross posting.");
+                return CompletableFuture.completedFuture(null);
+            }
+        } else {
+            log.info("Automatic publishing disabled in server {}.", serverId);
+            return CompletableFuture.completedFuture(null);
+        }
+    }
+
+    @Transactional
+    public void persistForumPostsAndThreadCount(List<Pair<Long, Long>> posts) {
         Map<Long, NewsSource> sourceMap = newsSourceManagementServiceBean.loadNewsSources()
                 .stream()
                 .collect(Collectors.toMap(NewsSource::getUserId, Function.identity()));
 
-        entries.forEach(forumPostNotificationEntry ->
-                newsForumPostManagementServiceBean.createPost(sourceMap.get(forumPostNotificationEntry.getCreatorId()), forumPostNotificationEntry.getPostId()));
+        posts.forEach(forumPostNotificationEntry ->
+                newsForumPostManagementServiceBean.createPost(sourceMap.get(forumPostNotificationEntry.getLeft()), forumPostNotificationEntry.getRight()));
 
         sourceMap.values().forEach(newsSource -> {
             Long currentThreadCount = forumApiClient.getCurrentThreadCount(newsSource);

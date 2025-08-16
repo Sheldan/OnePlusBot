@@ -2,6 +2,7 @@ package dev.sheldan.oneplus.bot.modules.news.config;
 
 import dev.sheldan.abstracto.core.config.FeatureConfig;
 import dev.sheldan.abstracto.core.config.FeatureDefinition;
+import dev.sheldan.abstracto.core.config.FeatureMode;
 import dev.sheldan.abstracto.core.config.PostTargetEnum;
 import org.springframework.stereotype.Component;
 
@@ -21,5 +22,10 @@ public class NewsFeature implements FeatureConfig {
     @Override
     public List<PostTargetEnum> getRequiredPostTargets() {
         return Arrays.asList(NewsPostTarget.NEWS_TARGET, NewsPostTarget.FORUM_POST_NOTIFICATION);
+    }
+
+    @Override
+    public List<FeatureMode> getAvailableModes() {
+        return Arrays.asList(NewsFeatureMode.AUTOMATIC_POST, NewsFeatureMode.AUTOMATIC_PUBLISH);
     }
 }

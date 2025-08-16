@@ -36,10 +36,24 @@ public class UpdateNews extends AbstractConditionableCommand {
 
     @Override
     public CommandConfiguration getConfiguration() {
-        Parameter newsPostId = Parameter.builder().name("newsPostId").type(Long.class).templated(true).build();
-        Parameter newsText = Parameter.builder().name("text").type(String.class).remainder(true).templated(true).build();
+        Parameter newsPostId = Parameter
+                .builder()
+                .name("newsPostId")
+                .type(Long.class)
+                .templated(true)
+                .build();
+        Parameter newsText = Parameter
+                .builder()
+                .name("text")
+                .type(String.class)
+                .remainder(true)
+                .templated(true)
+                .build();
         List<Parameter> parameters = Arrays.asList(newsPostId, newsText);
-        HelpInfo helpInfo = HelpInfo.builder().templated(true).build();
+        HelpInfo helpInfo = HelpInfo
+                .builder()
+                .templated(true)
+                .build();
         return CommandConfiguration.builder()
                 .name("updateNews")
                 .module(NewsModuleDefinition.NEWS)
